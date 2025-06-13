@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Triple Winner Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.4;
+            color: #333;
+            margin: 15px;
+            background-color: #f4f4f4;
+            font-size: 0.85em; /* Smaller base font */
+        }
+        .container {
+            max-width: 950px;
+            margin: auto;
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #0056b3;
+            line-height: 1.2;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 5px;
+            font-size: 1.5em; /* Smaller */
+        }
+        h2 { /* This H2 styling is now only used for division headers implicitly or for potential future use */
+            text-align: center;
+            margin-top: 0;
+            font-size: 0.9em; /* Smaller */
+            color: #555;
+        }
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 8px; /* Reduced gap */
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+            flex-wrap: nowrap; /* Prevent wrapping */
+            overflow-x: auto; /* Allow horizontal scrolling if necessary */
+            font-size: 0.75em; /* Smaller overall font in controls */
+        }
+        .controls div {
+            flex-shrink: 0;
+            min-width: unset; /* Remove minimum width constraint */
+            text-align: center;
+            /* Consider adding flex-grow: 1; if you want them to expand to fill available space */
+        }
+        .controls label {
+            font-weight: bold;
+            margin-right: 0; /* No right margin needed with display: block */
+            display: block;
+            margin-bottom: 2px; /* Reduced bottom margin */
+            font-size: 0.85em; /* Slightly larger than input text for readability */
+        }
+        .controls select, .controls input[type="checkbox"] {
+            padding: 3px 5px; /* Reduced padding */
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            font-size: 0.75em; /* Smaller font inside inputs */
+            width: 100%;
+            box-sizing: border-box;
+            display: inline-block;
+            vertical-align: middle;
+            height: auto;
+        }
+        .controls input[type="checkbox"] {
+            width: auto;
+            margin-top: 3px; /* Adjusted top margin for checkbox */
+        }
+        .button-group {
+            text-align: center;
+            margin-top: 15px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .action-button {
+            padding: 8px 18px;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.88em; /* Smaller */
+            transition: background-color 0.3s ease;
+        }
+        .print-button {
+            background-color: #28a745;
+        }
+        .print-button:hover {
+            background-color: #218838;
+        }
+        .download-button {
+            background-color: #007bff;
+        }
+        .download-button:hover {
+            background-color: #0056b3;
+        }
+        /* NEW: Style for the Clear Filters button */
+        .clear-button {
+            background-color: #dc3545; /* Red color */
+        }
+        .clear-button:hover {
+            background-color: #c82333; /* Darker red on hover */
+        }
+        .meet-info {
+            text-align: center;
+            font-size: 0.88em; /* Adjusted to be smaller */
+            font-weight: bold;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #eee;
+        }
+        .meet-scores-table { /* This style is now largely unused for the main display */
+            width: auto;
+            margin: 5px auto 0 auto; 
+            border-collapse: collapse;
+            font-size: 0.9em; 
+        }
+        .meet-scores-table td {
+            padding: 2px 8px;
+            border: none; 
+            text-align: center;
+        }
+        .meet-scores-table .score-value {
+            font-weight: bold;
+            color: #333; 
+        }
+        .meet-scores-table .winner-score {
+            color: #28a745; 
+        }
+        .winning-team-text {
+            color: #28a745;
+        }
+        .winning-checkmark {
+            color: #28a745; 
+            margin-left: 3px; 
+        }
+        .division-header {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #0056b3;
+            text-align: center;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #0056b3;
+        }
+
+        .triple-winner-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        .triple-winner-table th, 
+        .triple-winner-table td {
+            border: 1px solid #ddd;
+            padding: 3px 10px; 
+            text-align: left;
+            font-size: 0.75em; 
+        }
+        .triple-winner-table th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+            color: #555;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            white-space: nowrap; 
+        }
+        .triple-winner-table th.sortable-header {
+            cursor: pointer;
+        }
+        .triple-winner-table th .sort-status-text { /* NEW class for sort status text */
+            font-size: 0.8em; /* Adjusted for readability */
+            font-weight: normal; /* Do not inherit bold */
+            color: #888; /* Subtle grey */
+            margin-left: 5px;
+        }
+        /* NEW: Right align Distance column */
+        .triple-winner-table .distance-column,
+        .triple-winner-table td:nth-child(4) { /* Target 4th column specifically for distance */
+            text-align: right;
+        }
+
+        /* Alternating row group shading */
+        .alternate-row-group {
+            background-color: #f8f8f4;
+        }
+        
+        /* Style for when no report is selected or found */
+        .no-report-message {
+            text-align: center;
+            color: #888;
+            font-style: italic;
+            margin-top: 40px;
+            font-size: 0.85em;
+        }
+
+        /* --- Print-specific styles --- */
+        @media print {
+            body {
+                background-color: white !important;
+                margin: 0;
+                padding: 0;
+                font-size: 0.7em;
+            }
+            .container {
+                box-shadow: none !important;
+                border-radius: 0 !important;
+                padding: 10px;
+                margin: 0;
+                max-width: none;
+            }
+            .controls, .button-group {
+                display: none !important;
+            }
+            h1 {
+                font-size: 1.2em !important;
+            }
+            h2 {
+                font-size: 0.8em !important;
+            }
+            .meet-info {
+                font-size: 0.8em !important;
+                border-bottom: 1px dashed #ccc !important;
+            }
+            .triple-winner-table {
+                page-break-inside: auto;
+                page-break-after: auto;
+            }
+            .triple-winner-table th,
+            .triple-winner-table td {
+                border-color: #999 !important;
+                font-size: 0.65em !important;
+                padding: 2px 5px !important;
+            }
+            .alternate-row-group {
+                background-color: #f2f2f2 !important;
+            }
+            .meet-scores-table .winner-score {
+                color: black !important;
+            }
+            .winning-team-text {
+                color: black !important;
+            }
+            .winning-checkmark {
+                color: black !important;
+            }
+            .triple-winner-table th .sort-status-text { /* Hide the indicator text in print */
+                display: none !important; 
+            }
+            /* Ensure print styles for distance column are also right-aligned */
+            .triple-winner-table .distance-column,
+            .triple-winner-table td:nth-child(4) {
+                text-align: right !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>2025 RSL Weekly Triple Winner Report</h1>
+
+        <div class="controls">
+            <div>
+                <label for="weekFilter">Select Week:</label>
+                <select id="weekFilter"></select>
+            </div>
+            <div>
+                <label for="meetDate">Select Date:</label>
+                <select id="meetDate"></select>
+            </div>
+            <div>
+                <label for="meetNameFilter">Select Meet:</label>
+                <select id="meetNameFilter"></select>
+            </div>
+            <div>
+                <label for="teamFilter">Filter by Team:</label>
+                <select id="teamFilter"></select>
+            </div>
+            <div>
+                <label for="divisionFilter">Filter by Division:</label>
+                <select id="divisionFilter"></select>
+            </div>
+            <div>
+                <label for="showScoresToggle">Show Scores:</label>
+                <input type="checkbox" id="showScoresToggle">
+            </div>
+        </div>
+
+        <div class="button-group">
+            <button id="printReportBtn" class="action-button print-button">Print Current Report (as PDF)</button>
+            <button id="downloadTripleWinnersCsvBtn" class="action-button download-button">Download Triple Winners CSV</button>
+            <button id="downloadTeamScoresCsvBtn" class="action-button download-button">Download Team Scores CSV</button>
+            <button id="clearFiltersBtn" class="action-button clear-button">Clear All Filters</button>
+        </div>
+
+        <div id="reportOutput">
+            <p class="no-report-message">Please select a meet week to view the Triple Winner report.</p>
+        </div>
+    </div>
+
+    <script>
+        // Define team divisions (REQUIRED FOR FILTERS TO WORK)
+        const teamDivisions = {
+            "Massad YMCA": "Battlefield",
+            "Hampton Oaks": "Battlefield",
+            "Woodlands": "Battlefield",
+            "Fawn Lake": "Battlefield",
+            "Spotswood": "Battlefield",
+            "Curtis Park": "Battlefield",
+            
+            "Leeland Station": "Patriot",
+            "Austin Ridge": "Patriot",
+            "Lake of the Woods": "Patriot",
+            "Lee's Hill": "Patriot",
+            "Aquia Harbour": "Patriot",
+            "Dahlgren": "Patriot",
+            "Fox Point": "Patriot",
+
+            "Fredericksburg CC": "American",
+            "Ferry Farm": "American",
+            "Chancellor": "American",
+            "Hopyard": "American",
+            "Caroline": "American",
+            "Spotsy Y": "American",
+
+            "Grafton": "National",
+            "College Heights": "National",
+            "Salem Fields": "National",
+            "Lake Wilderness": "National",
+            "Eden Estates": "National",
+            "Idlewild": "National"
+        };
+
+        // GLOBAL VARIABLE to hold the swim meets data, populated by the fetch call
+        let swimMeetsData = []; 
+
+        const weekFilterSelect = document.getElementById('weekFilter'); 
+        const meetDateSelect = document.getElementById('meetDate');
+        const meetNameFilterSelect = document.getElementById('meetNameFilter'); 
+        const teamFilterSelect = document.getElementById('teamFilter');
+        const divisionFilterSelect = document.getElementById('divisionFilter');
+        const reportOutputDiv = document.getElementById('reportOutput');
+        const printReportBtn = document.getElementById('printReportBtn');
+        const downloadTripleWinnersCsvBtn = document.getElementById('downloadTripleWinnersCsvBtn');
+        const downloadTeamScoresCsvBtn = document.getElementById('downloadTeamScoresCsvBtn');
+        const showScoresToggle = document.getElementById('showScoresToggle'); 
+        const clearFiltersBtn = document.getElementById('clearFiltersBtn');
+
+        let currentTripleWinnersForCSV = [];
+        let currentTeamScoresForCSV = [];
+        let currentReportFileName = 'RSL_Triple_Winner_Report';
+
+        // Global variable to store the calculated season start date
+        let seasonStartDate = null;
+
+        // Global variables for sorting
+        let currentSortColumn = 'name'; // Default sort by athlete name
+        let currentSortOrder = 'asc'; // Default sort order ascending
+
+        /**
+         * Calculates the Sunday of the week for a given date.
+         * @param {string} dateString - A date string (e.g., "Jun 12, 2024").
+         * @returns {string} The date string for the Sunday of that week.
+         */
+        function getWeekStartDate(dateString) {
+            const date = new Date(dateString);
+            const dayOfWeek = date.getDay(); // 0 for Sunday, 1 for Monday, etc.
+            const diff = date.getDate() - dayOfWeek; // Adjust to Sunday
+            const sunday = new Date(date.setDate(diff));
+            
+            const options = { month: 'short', day: 'numeric', year: 'numeric' };
+            return sunday.toLocaleDateString('en-US', options).replace(/,$/, ''); // Remove trailing comma
+        }
+
+        /**
+         * Gets the week number and label for a given date relative to the season start.
+         * @param {string} dateString - The date string of a meet.
+         * @returns {object} An object with `label` (e.g., "Week #1") and `value` (the integer week number as string).
+         */
+        function getWeekInfo(dateString) {
+            if (!seasonStartDate && swimMeetsData.length > 0) {
+                // If seasonStartDate is not set (e.g., first run or after data paste), find it
+                const allDates = swimMeetsData.map(meet => new Date(meet.date));
+                if (allDates.length > 0) {
+                    let minDate = new Date(Math.min(...allDates));
+                    // Normalize seasonStartDate to Sunday of its week
+                    minDate.setDate(minDate.getDate() - minDate.getDay());
+                    seasonStartDate = minDate;
+                }
+            }
+
+            if (!seasonStartDate) {
+                return { label: "N/A", value: "" }; // No meets, no week info
+            }
+
+            const meetDate = new Date(dateString);
+            // Normalize meetDate to Sunday of its week for consistent comparison
+            meetDate.setDate(meetDate.getDate() - meetDate.getDay());
+
+            // Calculate difference in milliseconds, then convert to weeks
+            const diffTime = Math.abs(meetDate.getTime() - seasonStartDate.getTime());
+            const diffWeeks = Math.floor(diffTime / (1000 * 60 * 60 * 24 * 7));
+            const weekNumber = diffWeeks + 1; // Weeks are 1-indexed
+
+            return { label: `Week #${weekNumber}`, value: weekNumber.toString() };
+        }
+
+        // Function to update Meet Date, Meet Name, and Team dropdowns based on Week/Division filters
+        function updateCascadingFilters() {
+            const selectedWeek = weekFilterSelect.value;
+            const selectedDate = meetDateSelect.value; 
+            const selectedDivision = divisionFilterSelect.value;
+            const selectedMeetName = meetNameFilterSelect.value; 
+            const selectedTeam = teamFilterSelect.value; 
+
+            let availableMeets = swimMeetsData;
+
+            // 1. Filter meets by selected week
+            if (selectedWeek) {
+                availableMeets = availableMeets.filter(meet => getWeekInfo(meet.date).value === selectedWeek);
+            }
+
+            // 2. Filter by selected division (on meets)
+            if (selectedDivision && selectedDivision !== "All Divisions") {
+                availableMeets = availableMeets.filter(meet => 
+                    teamDivisions[meet.team1] === selectedDivision || teamDivisions[meet.team2] === selectedDivision
+                );
+            }
+
+            // --- Populate Meet Date Filter dropdown ---
+            meetDateSelect.innerHTML = '<option value="">Select Date</option>'; 
+            const uniqueDates = new Set();
+            availableMeets.forEach(meet => {
+                uniqueDates.add(meet.date);
+            });
+            // Sort dates from newest to oldest
+            [...uniqueDates].sort((a, b) => new Date(b) - new Date(a)).forEach(date => {
+                const option = document.createElement('option');
+                option.value = date;
+                option.textContent = date;
+                meetDateSelect.appendChild(option);
+            });
+            // Preserve selected value if it's still valid
+            if (selectedDate && uniqueDates.has(selectedDate)) {
+                meetDateSelect.value = selectedDate;
+            } else {
+                meetDateSelect.value = ""; 
+            }
+
+
+            // --- Populate Meet Name Filter dropdown ---
+            meetNameFilterSelect.innerHTML = '<option value="">All Meets</option>'; 
+            const uniqueMeetNames = new Set();
+            let meetsForMeetNameFilter = availableMeets;
+            if (selectedDate) { // Only refine meet names if a date is actively selected
+                meetsForMeetNameFilter = availableMeets.filter(meet => meet.date === selectedDate);
+            }
+
+            meetsForMeetNameFilter.forEach(meet => {
+                // Construct the display name for the dropdown, including (EXH) if applicable
+                const meetDisplayName = `${meet.team1} at ${meet.team2} - ${meet.date}${meet.isExhibition ? ' (EXH)' : ''}`;
+                uniqueMeetNames.add(meetDisplayName);
+            });
+            [...uniqueMeetNames].sort().forEach(name => {
+                const option = document.createElement('option');
+                option.value = name; // Value is the full display name
+                option.textContent = name;
+                meetNameFilterSelect.appendChild(option);
+            });
+            // Preserve selected value if it's still valid
+            if (selectedMeetName && uniqueMeetNames.has(selectedMeetName)) {
+                meetNameFilterSelect.value = selectedMeetName;
+            } else {
+                meetNameFilterSelect.value = "";
+            }
+
+
+            // --- Populate Team Filter dropdown ---
+            teamFilterSelect.innerHTML = '<option value="">All Teams</option>'; 
+            const uniqueTeamsForCurrentFilters = new Set();
+            
+            let meetsForTeamFilter = availableMeets;
+            // If a specific meet is selected, find the original meet object based on the display name
+            if (selectedMeetName && selectedMeetName !== "All Meets") {
+                const selectedMeetObj = availableMeets.find(meet => {
+                    const meetDisplayName = `${meet.team1} at ${meet.team2} - ${meet.date}${meet.isExhibition ? ' (EXH)' : ''}`;
+                    return meetDisplayName === selectedMeetName;
+                });
+                if (selectedMeetObj) {
+                    uniqueTeamsForCurrentFilters.add(selectedMeetObj.team1);
+                    uniqueTeamsForCurrentFilters.add(selectedMeetObj.team2);
+                }
+            } else if (selectedDate) {
+                // If only a date is selected, show all teams from that date
+                meetsForTeamFilter = availableMeets.filter(meet => meet.date === selectedDate);
+                meetsForTeamFilter.forEach(meet => {
+                    uniqueTeamsForCurrentFilters.add(meet.team1);
+                    uniqueTeamsForCurrentFilters.add(meet.team2);
+                });
+            } else {
+                // If no date or meet is selected, show all teams from the available meets (week/division filtered)
+                availableMeets.forEach(meet => {
+                    uniqueTeamsForCurrentFilters.add(meet.team1);
+                    uniqueTeamsForCurrentFilters.add(meet.team2);
+                });
+            }
+
+            // The team filter dropdown uses the original team names as values for filtering
+            const sortedUniqueTeams = [...uniqueTeamsForCurrentFilters].sort();
+
+            sortedUniqueTeams.forEach(team => {
+                const option = document.createElement('option');
+                option.value = team; // Value is the original team name for accurate filtering
+                option.textContent = team; // Text content is also original, as no EXH should be here.
+                teamFilterSelect.appendChild(option);
+            });
+            // Preserve selected value (original team name)
+            if (selectedTeam && sortedUniqueTeams.includes(selectedTeam)) {
+                teamFilterSelect.value = selectedTeam;
+            } else {
+                teamFilterSelect.value = ""; 
+            }
+
+            generateReport(); // Always regenerate report after updating cascading filters
+        }
+
+
+        function populateDropdownsInitial() { 
+            // Calculate seasonStartDate once for all week calculations
+            if (swimMeetsData.length > 0) {
+                const allDates = swimMeetsData.map(meet => new Date(meet.date));
+                let minDate = new Date(Math.min(...allDates));
+                // Normalize seasonStartDate to Sunday of its week
+                minDate.setDate(minDate.getDate() - minDate.getDay());
+                seasonStartDate = minDate;
+            } else {
+                seasonStartDate = null; // Reset if no data
+            }
+
+            // --- Populate Week Filter dropdown ---
+            weekFilterSelect.innerHTML = '<option value="">Select Week</option>';
+            if (seasonStartDate) { // Only populate if there's data
+                const uniqueWeeks = new Set();
+                swimMeetsData.forEach(meet => {
+                    uniqueWeeks.add(getWeekInfo(meet.date).value); // Use week number as value
+                });
+                // Sort weeks numerically (1, 2, 3...)
+                [...uniqueWeeks].sort((a, b) => parseInt(a) - parseInt(b)).forEach(weekNum => {
+                    const option = document.createElement('option');
+                    option.value = weekNum;
+                    option.textContent = `Week #${weekNum}`;
+                    weekFilterSelect.appendChild(option);
+                });
+            }
+
+
+            // Populate Division Filter dropdown (alphabetical)
+            const allDivisions = [...new Set(Object.values(teamDivisions))].sort();
+            divisionFilterSelect.innerHTML = '<option value="">All Divisions</option>';
+            allDivisions.forEach(division => {
+                const option = document.createElement('option');
+                option.value = division;
+                option.textContent = division;
+                divisionFilterSelect.appendChild(option);
+            });
+            
+            updateCascadingFilters(); // Initial call to update cascading filters (will also generate report)
+        }
+
+        // Helper function to sort swimmers based on current sort column and order
+        function sortSwimmers(swimmers) {
+            return swimmers.sort((a, b) => {
+                let valA, valB;
+
+                switch (currentSortColumn) {
+                    case 'name':
+                        valA = a.name;
+                        valB = b.name;
+                        break;
+                    case 'age':
+                        valA = a.age;
+                        valB = b.age;
+                        break;
+                    case 'team':
+                        valA = a.team;
+                        valB = b.team;
+                        break;
+                    default:
+                        valA = a.name; 
+                        valB = b.name;
+                }
+
+                let comparison = 0;
+                if (typeof valA === 'string' && typeof valB === 'string') {
+                    comparison = valA.localeCompare(valB);
+                } else {
+                    comparison = valA - valB;
+                }
+
+                return currentSortOrder === 'asc' ? comparison : -comparison;
+            });
+        }
+
+
+        function generateReport() {
+            const selectedWeek = weekFilterSelect.value;
+            const selectedDate = meetDateSelect.value;
+            const selectedMeetName = meetNameFilterSelect.value; // This now includes (EXH) if present
+            const selectedTeam = teamFilterSelect.value; 
+            const selectedDivision = divisionFilterSelect.value;
+            const showScores = showScoresToggle.checked; 
+
+            let filteredMeets = swimMeetsData;
+            let reportHtml = '';
+            let allTripleWinners = [];
+            currentTeamScoresForCSV = []; // Reset CSV scores for each report generation
+
+            // Apply filters in order of precedence for the data pool
+            if (selectedWeek) {
+                filteredMeets = filteredMeets.filter(meet => getWeekInfo(meet.date).value === selectedWeek);
+            }
+            if (selectedDate) {
+                filteredMeets = filteredMeets.filter(meet => meet.date === selectedDate);
+            }
+            if (selectedMeetName && selectedMeetName !== "All Meets") {
+                filteredMeets = filteredMeets.filter(meet => {
+                    const meetDisplayName = `${meet.team1} at ${meet.team2} - ${meet.date}${meet.isExhibition ? ' (EXH)' : ''}`;
+                    return meetDisplayName === selectedMeetName;
+                });
+            }
+            // This is the filter for MEETs based on division (if ANY team in meet is in division)
+            if (selectedDivision && selectedDivision !== "All Divisions") {
+                filteredMeets = filteredMeets.filter(meet => 
+                    teamDivisions[meet.team1] === selectedDivision || teamDivisions[meet.team2] === selectedDivision
+                );
+            }
+
+            // Determine which meets to display headers for (based on selected Team and overall data context)
+            let meetsForDisplay = filteredMeets;
+            // Handle the "Independent Team Search" case: if only a team is selected, override other filters for display.
+            const hasPrimaryFiltersExcludingTeam = selectedWeek || selectedDate || selectedMeetName || selectedDivision;
+            if (selectedTeam && selectedTeam !== "All Teams" && !hasPrimaryFiltersExcludingTeam) {
+                // If only a team is filtered, search all data
+                meetsForDisplay = swimMeetsData.filter(meet => meet.team1 === selectedTeam || meet.team2 === selectedTeam);
+            } else if (selectedTeam && selectedTeam !== "All Teams") {
+                // If team is selected with other filters, further refine the list
+                meetsForDisplay = meetsForDisplay.filter(meet => meet.team1 === selectedTeam || meet.team2 === selectedTeam);
+            }
+
+
+            // --- Condition to display ANY report content at all ---
+            // Report output will only be generated if a Week is selected OR if a team is selected (independent search).
+            // If filters result in no meets, display a "no data found" message.
+            const isAnyFilterSelectedNow = selectedWeek || selectedDate || selectedMeetName || selectedTeam || selectedDivision;
+
+            if (!selectedWeek && !isAnyFilterSelectedNow) { /* Check if NO filter selected yet */
+                reportHtml = '<p class="no-report-message">Please select a meet week to view the Triple Winner report.</p>';
+            } else if (meetsForDisplay.length === 0) { 
+                reportHtml = '<p class="no-report-message">No meet data found for the selected criteria.</p>';
+            }
+            else {
+                // Sort meets for display: by Division, then by Week (if no specific week selected), then by Date, then by Team Name
+                let sortedMeets = [...meetsForDisplay]; 
+                sortedMeets.sort((a, b) => {
+                    const divA = teamDivisions[a.team1] || teamDivisions[a.team2] || '';
+                    const divB = teamDivisions[b.team1] || teamDivisions[b.team2] || '';
+                    if (divA !== divB) return divA.localeCompare(divB);
+                    
+                    // If no specific week is selected, sort by week number
+                    if (!selectedWeek) {
+                        const weekNumA = parseInt(getWeekInfo(a.date).value);
+                        const weekNumB = parseInt(getWeekInfo(b.date).value);
+                        if (weekNumA !== weekNumB) return weekNumA - weekNumB;
+                    }
+
+                    const dateA = new Date(a.date);
+                    const dateB = new Date(b.date);
+                    if (dateA.getTime() !== dateB.getTime()) return dateB - dateA; // Newest date first
+
+                    return a.team1.localeCompare(b.team1); // Then by team name
+                });
+                
+                let currentDivisionHeader = null;
+
+                sortedMeets.forEach(meet => {
+                    const meetDivision = teamDivisions[meet.team1] || teamDivisions[meet.team2];
+                    const weekInfo = getWeekInfo(meet.date); // Get week info for the current meet
+
+                    // ONLY display division header AND meet info if showScoresToggle is CHECKED
+                    if (showScores) { 
+                        // Display division header if it changes or if no specific division is filtered
+                        if (meetDivision && meetDivision !== currentDivisionHeader && (!selectedDivision || selectedDivision === "All Divisions")) {
+                            reportHtml += `<div class="division-header">${meetDivision} Division</div>`;
+                            currentDivisionHeader = meetDivision;
+                        }
+
+                        let winnerNameDisplay, winnerScore, loserNameDisplay, loserScore;
+                        const checkmark = '&#10003;'; 
+
+                        // Determine and apply (H) or (A) suffixes for display
+                        const team1HADisplay = (meet.homeTeam && meet.team1 === meet.homeTeam) ? ' (H)' : ((meet.awayTeam && meet.team1 === meet.awayTeam) ? ' (A)' : '');
+                        const team2HADisplay = (meet.homeTeam && meet.team2 === meet.homeTeam) ? ' (H)' : ((meet.awayTeam && meet.team2 === meet.awayTeam) ? ' (A)' : '');
+                        
+                        const team1Display = `${meet.team1}${team1HADisplay}`;
+                        const team2Display = `${meet.team2}${team2HADisplay}`;
+
+                        // Determine winner and loser based on the 'winner' property (which is now just the team name)
+                        const isTeam1Winner = meet.winner === meet.team1;
+
+                        if (isTeam1Winner) {
+                            winnerNameDisplay = team1Display;
+                            winnerScore = meet.score1;
+                            loserNameDisplay = team2Display;
+                            loserScore = meet.score2;
+                        } else {
+                            winnerNameDisplay = team2Display;
+                            winnerScore = meet.score2;
+                            loserNameDisplay = team1Display;
+                            loserScore = meet.score1;
+                        }
+                        
+                        // Construct the full meet identifier with (EXH) and Week #
+                        const meetExhSuffix = meet.isExhibition ? ' (EXH)' : '';
+                        
+                        let scoreLineHtml = '';
+                        const isTeamFilterActive = (selectedTeam && selectedTeam !== "All Teams");
+
+                        if (isTeamFilterActive && (meet.team1 === selectedTeam || meet.team2 === selectedTeam)) {
+                            // If a specific team is filtered, display only that team's info
+                            const teamIsWinner = meet.winner === selectedTeam; // Winner string no longer contains (EXH)
+                            const displayedTeamName = (meet.team1 === selectedTeam) ? team1Display : team2Display;
+                            const displayedTeamScore = (meet.team1 === selectedTeam) ? meet.score1 : meet.score2;
+                            const scoreClass = teamIsWinner ? 'winner-score winning-team-text' : 'score-value';
+                            const displayedCheckmark = teamIsWinner ? `<span class="winning-checkmark">${checkmark}</span>` : '';
+
+                            scoreLineHtml = `<p>Week ${weekInfo.value}: ${displayedTeamName} <span class="${scoreClass}">${displayedTeamScore}</span> ${displayedCheckmark} (${meet.date})${meetExhSuffix}</p>`;
+                        } else {
+                            // Default display (Winner vs Loser)
+                            scoreLineHtml = `<p>Week ${weekInfo.value}: <span class="winner-score winning-team-text">${winnerScore}</span> <span class="winning-team-text">${winnerNameDisplay}</span> <span class="winning-checkmark">${checkmark}</span> at ${loserNameDisplay} <span class="score-value">${loserScore}</span> (${meet.date})${meetExhSuffix}</p>`;
+                        }
+
+                        reportHtml += `
+                            <div class="meet-info">
+                                ${scoreLineHtml}
+                            </div>
+                        `;
+                        currentTeamScoresForCSV.push({
+                           date: meet.date,
+                           team1: meet.team1,
+                           score1: meet.score1,
+                           team2: meet.team2,
+                           score2: meet.score2, // Ensure score2 is captured
+                           winner: meet.winner, // Keep original winner for CSV
+                           isExhibition: meet.isExhibition // Include for CSV if needed
+                        });
+                    }
+                    
+                    allTripleWinners = allTripleWinners.concat(meet.tripleWinners);
+                });
+
+                // Final filtering of triple winners by team (if selected)
+                if (selectedTeam && selectedTeam !== "All Teams") {
+                    allTripleWinners = allTripleWinners.filter(swimmer => swimmer.team === selectedTeam);
+                }
+
+                // NEW: Final filtering of triple winners by their assigned division
+                if (selectedDivision && selectedDivision !== "All Divisions") {
+                    allTripleWinners = allTripleWinners.filter(swimmer => teamDivisions[swimmer.team] === selectedDivision);
+                }
+
+                // Sort allTripleWinners based on current sort criteria
+                allTripleWinners = sortSwimmers(allTripleWinners);
+
+                let filenameParts = ['Triple_Winners'];
+                if (selectedWeek) filenameParts.push(`Week${selectedWeek}`);
+                if (selectedDate) filenameParts.push(selectedDate.replace(/[^a-zA-Z0-9]/g, ''));
+                if (selectedMeetName && selectedMeetName !== "All Meets") filenameParts.push(selectedMeetName.replace(/[^a-zA-Z0-9\(\)]/g, '').substring(0, 50)); 
+                if (selectedDivision && selectedDivision !== "All Divisions") filenameParts.push(selectedDivision.replace(/[^a-zA-Z0-9]/g, ''));
+                if (selectedTeam && selectedTeam !== "All Teams") filenameParts.push(selectedTeam.replace(/[^a-zA-Z0-9]/g, ''));
+                
+                if (filenameParts.filter(Boolean).length === 1 && filenameParts[0] === 'Triple_Winners') {
+                    currentReportFileName = 'RSL_Triple_Winners_All_Meets';
+                } else {
+                    currentReportFileName = filenameParts.filter(Boolean).join('_');
+                }
+
+                if (allTripleWinners.length === 0) {
+                    reportHtml += '<p class="no-report-message">No Triple Winners found for the selected criteria.</p>';
+                } else {
+                    reportHtml += `
+                        <table class="triple-winner-table">
+                            <thead>
+                                <tr>
+                                    <th data-sort-by="name" class="sortable-header">Athlete Name <span class="sort-status-text"></span></th>
+                                    <th data-sort-by="age" class="sortable-header">Age <span class="sort-status-text"></span></th>
+                                    <th data-sort-by="team" class="sortable-header">Team <span class="sort-status-text"></span></th>
+                                    <th class="distance-column">Distance</th>
+                                    <th>Event Type</th>
+                                    <th>Time</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                    `;
+
+                    let globalSwimmerIndex = 0;
+                    allTripleWinners.forEach(swimmer => {
+                        const rowGroupClass = (globalSwimmerIndex % 2 === 1) ? 'alternate-row-group' : '';
+
+                        swimmer.events.forEach((event, eventIndex) => {
+                            let athleteNameCell = '';
+                            let ageCell = '';
+                            let teamCell = '';
+
+                            if (eventIndex === 0) {
+                                athleteNameCell = `${swimmer.name} (${swimmer.gender.charAt(0)})`;
+                                ageCell = `${swimmer.age}`;
+                                teamCell = `${swimmer.team}`;
+                            }
+
+                            reportHtml += `
+                                <tr class="${rowGroupClass}">
+                                    <td>${athleteNameCell}</td>
+                                    <td>${ageCell}</td>
+                                    <td>${teamCell}</td>
+                                    <td>${event.distance}</td>
+                                    <td>${event.type}</td>
+                                    <td>${event.time}</td>
+                                </tr>
+                            `;
+                            currentTripleWinnersForCSV.push({
+                                name: swimmer.name,
+                                gender: swimmer.gender.charAt(0),
+                                age: swimmer.age,
+                                team: swimmer.team,
+                                distance: event.distance,
+                                eventType: event.type,
+                                time: event.time
+                            });
+                        });
+                        globalSwimmerIndex++;
+                    });
+
+                    reportHtml += `
+                            </tbody>
+                        </table>
+                    `;
+                }
+            }
+            reportOutputDiv.innerHTML = reportHtml;
+
+            updateSortIndicators(); // Update sort indicators after rendering
+        }
+
+        // Helper to update sort indicators in table headers
+        function updateSortIndicators() {
+            document.querySelectorAll('.sortable-header').forEach(header => {
+                const sortBy = header.dataset.sortBy;
+                const sortStatusSpan = header.querySelector('.sort-status-text');
+                
+                if (sortStatusSpan) { // Ensure the span exists
+                    if (sortBy === currentSortColumn) {
+                        sortStatusSpan.textContent = currentSortOrder === 'asc' ? '(Sort Asc)' : '(Sort Desc)';
+                    } else {
+                        sortStatusSpan.textContent = ''; // Clear status for non-sorted columns
+                    }
+                }
+            });
+        }
+
+
+        // Generic download function
+        function downloadFile(content, fileName, mimeType) {
+            const blob = new Blob([content], { type: mimeType });
+            const link = document.createElement("a");
+            if (link.download !== undefined) {
+                const url = URL.createObjectURL(blob);
+                link.setAttribute("href", url);
+                link.setAttribute("download", fileName);
+                link.style.visibility = 'hidden';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+        }
+
+        function downloadTripleWinnersCSV() {
+            if (currentTripleWinnersForCSV.length === 0) {
+                alert("No Triple Winner data available to download. Please select filters that yield results.");
+                return;
+            }
+
+            const headers = ["Athlete Name", "Gender", "Age", "Team", "Distance", "Event Type", "Time"];
+            let csvContent = headers.map(header => `"${header}"`).join(",") + "\n";
+
+            currentTripleWinnersForCSV.forEach(row => {
+                const values = [
+                    `"${row.name}"`,
+                    `"${row.gender}"`,
+                    row.age,
+                    `"${row.team}"`,
+                    `"${row.distance}"`,
+                    `"${row.eventType.replace(/"/g, '""')}"`, 
+                    `"${row.time}"`
+                ];
+                csvContent += values.join(",") + "\n";
+            });
+
+            downloadFile(csvContent, `${currentReportFileName}.csv`, 'text/csv;charset=utf-8;');
+        }
+
+        function downloadTeamScoresCSV() {
+            if (currentTeamScoresForCSV.length === 0) {
+                alert("No Team Score data available to download. Please select filters that yield results.");
+                return;
+            }
+
+            const headers = ["Date", "Team 1", "Score 1", "Team 2", "Score 2", "Winner", "Is Exhibition"]; // Added "Is Exhibition" header
+            let csvContent = headers.map(header => `"${header}"`).join(",") + "\n";
+
+            currentTeamScoresForCSV.forEach(meet => {
+                const values = [
+                    `"${meet.date}"`,
+                    `"${meet.team1}"`,
+                    meet.score1,
+                    `"${meet.team2}"`,
+                    meet.score2,
+                    `"${meet.winner}"`,
+                    meet.isExhibition ? "TRUE" : "FALSE" // Output TRUE/FALSE for exhibition status
+                ];
+                csvContent += values.join(",") + "\n";
+            });
+            
+            let filename = `Team_Scores`;
+            if (weekFilterSelect.value) filename += `_Week${weekFilterSelect.value}`;
+            if (meetDateSelect.value) filename += `_${meetDateSelect.value.replace(/[^a-zA-Z0-9]/g, '')}`;
+            // If the meet name in the filter includes (EXH), add it to the filename.
+            if (meetNameFilterSelect.value && meetNameFilterSelect.value !== "All Meets") {
+                const filteredMeetNameForFilename = meetNameFilterSelect.value.replace(/[^a-zA-Z0-9\(\)]/g, ''); // Allow parentheses
+                filename += `_${filteredMeetNameForFilename.substring(0, 50)}`; 
+            }
+            if (divisionFilterSelect.value && divisionFilterSelect.value !== "All Divisions") filename += `_${divisionFilterSelect.value.replace(/[^a-zA-Z0-9]/g, '')}`;
+            if (teamFilterSelect.value && teamFilterSelect.value !== "All Teams") filename += `_${teamFilterSelect.value.replace(/[^a-zA-Z0-9]/g, '')}`;
+            
+            filename += '.csv';
+
+            downloadFile(csvContent, filename, 'text/csv;charset=utf-8;');
+        }
+
+        // Helper to check if any filter is selected (used for initial "Please select a week" message)
+        function isAnyFilterSelected() {
+            return weekFilterSelect.value !== "" || 
+                           meetDateSelect.value !== "" || 
+                           meetNameFilterSelect.value !== "" || 
+                           teamFilterSelect.value !== "" || 
+                           divisionFilterSelect.value !== "";
+        }
+
+        /**
+         * Resets all filter dropdowns and the showScoresToggle to their default states.
+         * Then re-populates dropdowns and generates the report.
+         */
+        function clearAllFilters() {
+            weekFilterSelect.value = "";
+            meetDateSelect.value = "";
+            meetNameFilterSelect.value = "";
+            teamFilterSelect.value = "";
+            divisionFilterSelect.value = "";
+            showScoresToggle.checked = false; // Uncheck the show scores toggle
+
+            // Reset sorting to default
+            currentSortColumn = 'name';
+            currentSortOrder = 'asc';
+
+            // We need to re-populate dropdowns after clearing filters
+            populateDropdownsInitial(); 
+        }
+
+        // Event Listeners for filters
+        weekFilterSelect.addEventListener('change', updateCascadingFilters);
+        meetDateSelect.addEventListener('change', updateCascadingFilters);
+        divisionFilterSelect.addEventListener('change', updateCascadingFilters);
+        meetNameFilterSelect.addEventListener('change', updateCascadingFilters); 
+        teamFilterSelect.addEventListener('change', generateReport);
+        showScoresToggle.addEventListener('change', generateReport); 
+        
+        // Event listener for table header clicks (for sorting)
+        document.addEventListener('click', function(event) {
+            const th = event.target.closest('.triple-winner-table th');
+            if (th && th.classList.contains('sortable-header')) { 
+                const sortBy = th.dataset.sortBy;
+                if (sortBy) {
+                    if (currentSortColumn === sortBy) {
+                        currentSortOrder = currentSortOrder === 'asc' ? 'desc' : 'asc';
+                    } else {
+                        currentSortColumn = sortBy;
+                        currentSortOrder = 'asc';
+                    }
+                    generateReport(); // Re-generate report with new sort order
+                }
+            }
+        });
+
+        printReportBtn.addEventListener('click', () => {
+            window.print();
+        });
+        downloadTripleWinnersCsvBtn.addEventListener('click', downloadTripleWinnersCSV);
+        downloadTeamScoresCsvBtn.addEventListener('click', downloadTeamScoresCSV);
+        clearFiltersBtn.addEventListener('click', clearAllFilters); // NEW: Event listener for clear filters button
+
+        // --- Initial data load and setup ---
+        // This is the new part: fetch data from the JSON file
+        fetch('swimMeetsData.json') // Assumes swimMeetsData.json is in the same directory
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                swimMeetsData = data; // Assign the fetched data to the global variable
+                populateDropdownsInitial(); // Now initialize dropdowns and generate report with the loaded data
+            })
+            .catch(error => {
+                console.error('Error loading swim meets data:', error);
+                reportOutputDiv.innerHTML = '<p class="no-report-message" style="color: red;">Error loading data. Please ensure "swimMeetsData.json" exists and is accessible.</p>';
+            });
+
+    </script>
+</body>
+</html>
