@@ -1021,7 +1021,7 @@
 
         // --- Initial data load and setup ---
         // This is the new part: fetch data from the JSON file
-        fetch('2025SwimMeetsData.json') // Assumes swimMeetsData.json is in the same directory
+        fetch('2025swimMeetsData.json') // Assumes swimMeetsData.json is in the same directory
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
