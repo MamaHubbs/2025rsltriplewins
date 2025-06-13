@@ -493,15 +493,14 @@
             
             let meetsForTeamFilter = availableMeets;
             // If a specific meet is selected, find the original meet object based on the display name
-            if (selectedMeetName && selectedMeetName !== "All Meets") {
-                const selectedMeetObj = availableMeets.find(meet => {
-                    const meetDisplayName = `${meet.team1} at ${meet.team2} - ${meet.date}${meet.isExhibition ? ' (EXH)' : ''}`;
-                    return meetDisplayName === selectedMeetName;
-                });
-                if (selectedMeetObj) {
-                    uniqueTeamsForCurrentFilters.add(selectedMeetObj.team1);
-                    uniqueTeamsForCurrentFilters.add(selectedMeetObj.team2);
-                }
+            const selectedMeetObjFromFilter = availableMeets.find(meet => {
+                const meetDisplayName = `${meet.team1} at ${meet.team2} - ${meet.date}${meet.isExhibition ? ' (EXH)' : ''}`;
+                return meetDisplayName === selectedMeetName;
+            });
+
+            if (selectedMeetName && selectedMeetName !== "All Meets" && selectedMeetObjFromFilter) {
+                uniqueTeamsForCurrentFilters.add(selectedMeetObjFromFilter.team1);
+                uniqueTeamsForCurrentFilters.add(selectedMeetObjFromFilter.team2);
             } else if (selectedDate) {
                 // If only a date is selected, show all teams from that date
                 meetsForTeamFilter = availableMeets.filter(meet => meet.date === selectedDate);
@@ -640,7 +639,7 @@
                     return meetDisplayName === selectedMeetName;
                 });
             }
-            // This is the filter for MEETs based on division (if ANY team in meet is in division)
+            // This is the filter for MEETs based on division (if ANY team in meet is in in selected division)
             if (selectedDivision && selectedDivision !== "All Divisions") {
                 filteredMeets = filteredMeets.filter(meet => 
                     teamDivisions[meet.team1] === selectedDivision || teamDivisions[meet.team2] === selectedDivision
@@ -775,7 +774,7 @@
                     allTripleWinners = allTripleWinners.filter(swimmer => swimmer.team === selectedTeam);
                 }
 
-                // NEW: Final filtering of triple winners by their assigned division
+                // Final filtering of triple winners by their assigned division
                 if (selectedDivision && selectedDivision !== "All Divisions") {
                     allTripleWinners = allTripleWinners.filter(swimmer => teamDivisions[swimmer.team] === selectedDivision);
                 }
@@ -1021,20 +1020,20 @@
 
         // --- Initial data load and setup ---
         // This is the new part: fetch data from the JSON file
-        fetch('2025swimMeetsData.json') // Assumes 2025swimMeetsData.json is in the same directory
+        fetch('2025SwimMeetsData.json') // Updated this line to match your JSON filename
             .then(response => {
                 if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
+                    throw new Error(`HTTP error! status: ${response.status} from ${response.url}`); // More detailed error
                 }
                 return response.json();
             })
             .then(data => {
-                2025swimMeetsData = data; // Assign the fetched data to the global variable
+                swimMeetsData = data; // Assign the fetched data to the global variable
                 populateDropdownsInitial(); // Now initialize dropdowns and generate report with the loaded data
             })
             .catch(error => {
                 console.error('Error loading swim meets data:', error);
-                reportOutputDiv.innerHTML = '<p class="no-report-message" style="color: red;">Error loading data. Please ensure "2025swimMeetsData.json" exists and is accessible.</p>';
+                reportOutputDiv.innerHTML = '<p class="no-report-message" style="color: red;">Error loading data. Please ensure "2025SwimMeetsData.json" exists and is accessible in the same GitHub repository folder, and that its content is valid JSON.</p>';
             });
 
     </script>
