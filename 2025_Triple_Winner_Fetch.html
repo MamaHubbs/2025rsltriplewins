@@ -343,6 +343,14 @@
             "Idlewild": "National"
         };
 
+        // NEW: Define the custom order for divisions in the dropdown
+        const customDivisionOrder = [
+            "Battlefield",
+            "Patriot",
+            "American",
+            "National"
+        ];
+
         // GLOBAL VARIABLE to hold the swim meets data, populated by the fetch call
         let swimMeetsData = []; 
 
@@ -565,10 +573,9 @@
             }
 
 
-            // Populate Division Filter dropdown (alphabetical)
-            const allDivisions = [...new Set(Object.values(teamDivisions))].sort();
+            // Populate Division Filter dropdown using the custom order
             divisionFilterSelect.innerHTML = '<option value="">All Divisions</option>';
-            allDivisions.forEach(division => {
+            customDivisionOrder.forEach(division => { // Using customDivisionOrder here
                 const option = document.createElement('option');
                 option.value = division;
                 option.textContent = division;
