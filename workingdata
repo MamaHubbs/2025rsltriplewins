@@ -1,0 +1,1487 @@
+[
+  {
+    "date": "Jun 11, 2025",
+    "team1": "Hampton Oaks",
+    "team2": "Lake Wilderness",
+    "score1": 385,
+    "score2": 163,
+    "winner": "Hampton Oaks",
+    "homeTeam": "Hampton Oaks",
+    "awayTeam": "Lake Wilderness",
+    "isExhibition": true,
+    "tripleWinners": [
+      {
+        "name": "Woodruff, Ally",
+        "gender": "Female",
+        "age": 12,
+        "team": "Hampton Oaks",
+        "events": [
+          { "distance": "100m", "type": "Girls 12 & Under Freestyle", "time": "1:15.71" },
+          { "distance": "50m", "type": "Girls 11-12 Freestyle", "time": "33.15" },
+          { "distance": "50m", "type": "Girls 11-12 Breaststroke", "time": "49.97" }
+        ]
+      },
+      {
+        "name": "Green, Christian",
+        "gender": "Male",
+        "age": 12,
+        "team": "Hampton Oaks",
+        "events": [
+          { "distance": "100m", "type": "Boys 12 & Under Freestyle", "time": "1:13.25" },
+          { "distance": "50m", "type": "Boys 11-12 Butterfly", "time": "37.49" },
+          { "distance": "50m", "type": "Boys 11-12 Freestyle", "time": "41.38" }
+        ]
+      },
+      {
+        "name": "Woodruff, Kyra",
+        "gender": "Female",
+        "age": 16,
+        "team": "Hampton Oaks",
+        "events": [
+          { "distance": "100m", "type": "Girls 13-18 Freestyle", "time": "1:10.84" },
+          { "distance": "50m", "type": "Girls 15-18 Butterfly", "time": "37.06" },
+          { "distance": "50m", "type": "Girls 15-18 Freestyle", "time": "36.18" }
+        ]
+      },
+      {
+        "name": "Jackson, Austin",
+        "gender": "Male",
+        "age": 8,
+        "team": "Hampton Oaks",
+        "events": [
+          { "distance": "25m", "type": "Boys 7-8 Freestyle", "time": "21.69" },
+          { "distance": "25m", "type": "Boys 7-8 Butterfly", "time": "37.77" },
+          { "distance": "25m", "type": "Boys 7-8 Backstroke", "time": "29.97" }
+        ]
+      },
+      {
+        "name": "Woodruff, Owen",
+        "gender": "Male",
+        "age": 9,
+        "team": "Hampton Oaks",
+        "events": [
+          { "distance": "25m", "type": "Boys 9-10 Freestyle", "time": "19.24" },
+          { "distance": "25m", "type": "Boys 9-10 Butterfly", "time": "23.66" },
+          { "distance": "25m", "type": "Boys 9-10 Backstroke", "time": "23.15" }
+        ]
+      },
+      {
+        "name": "Woodruff, Mia",
+        "gender": "Female",
+        "age": 14,
+        "team": "Hampton Oaks",
+        "events": [
+          { "distance": "50m", "type": "Girls 13-14 Freestyle", "time": "31.73" },
+          { "distance": "50m", "type": "Girls 13-14 Backstroke", "time": "36.40" },
+          { "distance": "50m", "type": "Girls 13-14 Butterfly", "time": "40.71" }
+        ]
+      },
+      {
+        "name": "Hitt, Kayden",
+        "gender": "Male",
+        "age": 14,
+        "team": "Lake Wilderness",
+        "events": [
+          { "distance": "100m", "type": "Boys 13-18 Freestyle", "time": "1:02.78" },
+          { "distance": "50m", "type": "Boys 13-14 Butterfly", "time": "30.68" },
+          { "distance": "50m", "type": "Boys 13-14 Backstroke", "time": "31.69" }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "Jun 11, 2025",
+    "team1": "Caroline",
+    "team2": "College Heights",
+    "score1": 305,
+    "score2": 424,
+    "winner": "College Heights",
+    "homeTeam": "Caroline",
+    "awayTeam": "College Heights",
+    "isExhibition": true,
+    "tripleWinners": [
+      {
+        "name": "Furrow, Viv",
+        "gender": "Female",
+        "age": 12,
+        "team": "College Heights",
+        "events": [
+          { "distance": "100m", "type": "Girls 12 & Under Freestyle", "time": "1:12.07" },
+          { "distance": "50m", "type": "Girls 11-12 Butterfly", "time": "38.02" },
+          { "distance": "100m", "type": "Girls 12 & Under IM", "time": "1:26.54" }
+        ]
+      },
+      {
+        "name": "Jones, Blake",
+        "gender": "Male",
+        "age": 12,
+        "team": "Caroline",
+        "events": [
+          { "distance": "100m", "type": "Boys 12 & Under Freestyle", "time": "1:25.15" },
+          { "distance": "50m", "type": "Boys 11-12 Backstroke", "time": "45.22" },
+          { "distance": "50m", "type": "Boys 11-12 Breaststroke", "time": "47.06" }
+        ]
+      },
+      {
+        "name": "Smith, Ava",
+        "gender": "Female",
+        "age": 16,
+        "team": "Caroline",
+        "events": [
+          { "distance": "100m", "type": "Girls 13-18 Freestyle", "time": "1:12.66" },
+          { "distance": "50m", "type": "Girls 15-18 Freestyle", "time": "35.57" },
+          { "distance": "100m", "type": "Girls 13-18 IM", "time": "1:26.96" }
+        ]
+      },
+      {
+        "name": "McGrady, Finn",
+        "gender": "Male",
+        "age": 15,
+        "team": "College Heights",
+        "events": [
+          { "distance": "50m", "type": "Boys 15-18 Butterfly", "time": "30.59" },
+          { "distance": "50m", "type": "Boys 15-18 Breaststroke", "time": "38.86" },
+          { "distance": "100m", "type": "Boys 13-18 IM", "time": "1:14.27" }
+        ]
+      },
+      {
+        "name": "Jenkins, Mackenzie",
+        "gender": "Female",
+        "age": 9,
+        "team": "Caroline",
+        "events": [
+          { "distance": "25m", "type": "Girls 9-10 Butterfly", "time": "21.80" },
+          { "distance": "25m", "type": "Girls 9-10 Breaststroke", "time": "28.81" },
+          { "distance": "100m", "type": "Girls 12 & Under IM", "time": "2:04.10" }
+        ]
+      },
+      {
+        "name": "Fiefhaus V, Johnny",
+        "gender": "Male",
+        "age": 10,
+        "team": "Caroline",
+        "events": [
+          { "distance": "100m", "type": "Boys 12 & Under Freestyle", "time": "1:25.61" },
+          { "distance": "25m", "type": "Boys 9-10 Butterfly", "time": "17.08" },
+          { "distance": "100m", "type": "Boys 12 & Under IM", "time": "1:45.81" }
+        ]
+      },
+      {
+        "name": "MacDougall, Tristan",
+        "gender": "Male",
+        "age": 10,
+        "team": "Caroline",
+        "events": [
+          { "distance": "25m", "type": "Boys 9-10 Butterfly", "time": "17.22" },
+          { "distance": "25m", "type": "Boys 9-10 Breaststroke", "time": "25.73" },
+          { "distance": "100m", "type": "Boys 12 & Under IM", "time": "1:42.52" }
+        ]
+      },
+      {
+        "name": "VonTomaszewski, Vanna",
+        "gender": "Female",
+        "age": 14,
+        "team": "Caroline",
+        "events": [
+          { "distance": "100m", "type": "Girls 13-18 Freestyle", "time": "1:20.21" },
+          { "distance": "50m", "type": "Girls 13-14 Butterfly", "time": "38.84" },
+          { "distance": "100m", "type": "Girls 13-18 IM", "time": "1:32.23" }
+        ]
+      },
+      {
+        "name": "MacDougall, Tate",
+        "gender": "Male",
+        "age": 13,
+        "team": "Caroline",
+        "events": [
+          { "distance": "50m", "type": "Boys 13-14 Butterfly", "time": "34.20" },
+          { "distance": "50m", "type": "Boys 13-14 Breaststroke", "time": "42.16" },
+          { "distance": "100m", "type": "Boys 13-18 IM", "time": "1:20.08" }
+        ]
+      },
+      {
+        "name": "Furrow, Annie",
+        "gender": "Female",
+        "age": 15,
+        "team": "College Heights",
+        "events": [
+          { "distance": "50m", "type": "Girls 15-18 Butterfly", "time": "32.77" },
+          { "distance": "50m", "type": "Girls 15-18 Breaststroke", "time": "38.87" },
+          { "distance": "100m", "type": "Girls 13-18 IM", "time": "1:15.70" }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "Jun 11, 2025",
+    "team1": "Chancellor",
+    "team2": "Idlewild",
+    "score1": 439,
+    "score2": 287,
+    "winner": "Chancellor",
+    "homeTeam": "Chancellor",
+    "awayTeam": "Idlewild",
+    "isExhibition": true,
+    "tripleWinners": [
+      {
+        "name": "Pinto, Lucia",
+        "gender": "Female",
+        "age": 10,
+        "team": "Chancellor",
+        "events": [
+          { "distance": "25yd", "type": "Girls 9-10 Freestyle", "time": "15.98" },
+          { "distance": "25yd", "type": "Girls 9-10 Butterfly", "time": "19.05" },
+          { "distance": "25yd", "type": "Girls 9-10 Breaststroke", "time": "22.34" }
+        ]
+      },
+      {
+        "name": "Brezee, Jasper",
+        "gender": "Male",
+        "age": 9,
+        "team": "Chancellor",
+        "events": [
+          { "distance": "25yd", "type": "Boys 9-10 Freestyle", "time": "16.71" },
+          { "distance": "25yd", "type": "Boys 9-10 Butterfly", "time": "18.32" },
+          { "distance": "25yd", "type": "Boys 9-10 Backstroke", "time": "20.26" }
+        ]
+      },
+      {
+        "name": "Brezee, Quinn",
+        "gender": "Female",
+        "age": 11,
+        "team": "Chancellor",
+        "events": [
+          { "distance": "100yd", "type": "Girls 12 & Under Freestyle", "time": "1:14.76" },
+          { "distance": "50yd", "type": "Girls 11-12 Butterfly", "time": "39.49" },
+          { "distance": "50yd", "type": "Girls 11-12 Backstroke", "time": "40.20" }
+        ]
+      },
+      {
+        "name": "Kaye, Charlotte",
+        "gender": "Female",
+        "age": 13,
+        "team": "Chancellor",
+        "events": [
+          { "distance": "50yd", "type": "Girls 13-14 Freestyle", "time": "30.51" },
+          { "distance": "50yd", "type": "Girls 13-14 Butterfly", "time": "35.70" },
+          { "distance": "50yd", "type": "Girls 13-14 Breaststroke", "time": "46.07" }
+        ]
+      },
+      {
+        "name": "Westphal, Kenny",
+        "gender": "Male",
+        "age": 17,
+        "team": "Chancellor",
+        "events": [
+          { "distance": "100yd", "type": "Boys 13-18 Freestyle", "time": "1:06.57" },
+          { "distance": "50yd", "type": "Men 15-18 Butterfly", "time": "34.50" },
+          { "distance": "50yd", "type": "Men 15-18 Breaststroke", "time": "36.08" }
+        ]
+      },
+      {
+        "name": "Sowers, Sam",
+        "gender": "Female",
+        "age": 18,
+        "team": "Idlewild",
+        "events": [
+          { "distance": "50yd", "type": "Women 15-18 Butterfly", "time": "29.21" },
+          { "distance": "50yd", "type": "Women 15-18 Backstroke", "time": "30.23" },
+          { "distance": "100yd", "type": "Girls 13-18 IM", "time": "1:09.03" }
+        ]
+      },
+      {
+        "name": "Palko, Scott",
+        "gender": "Male",
+        "age": 14,
+        "team": "Idlewild",
+        "events": [
+          { "distance": "50yd", "type": "Boys 13-14 Freestyle", "time": "26.45" },
+          { "distance": "50yd", "type": "Boys 13-14 Butterfly", "time": "29.21" },
+          { "distance": "100yd", "type": "Boys 13-18 IM", "time": "1:07.76" }
+        ]
+      },
+      {
+        "name": "Raska, Aubrey",
+        "gender": "Female",
+        "age": 8,
+        "team": "Idlewild",
+        "events": [
+          { "distance": "25yd", "type": "Girls 8 & Under Butterfly", "time": "18.74" },
+          { "distance": "25yd", "type": "Girls 8 & Under Breaststroke", "time": "24.50" },
+          { "distance": "100yd", "type": "Girls 12 & Under IM", "time": "1:37.37" }
+        ]
+      },
+      {
+        "name": "Hensley, Stella",
+        "gender": "Female",
+        "age": 18,
+        "team": "Idlewild",
+        "events": [
+          { "distance": "100yd", "type": "Girls 13-18 Freestyle", "time": "1:11.16" },
+          { "distance": "50yd", "type": "Women 15-18 Freestyle", "time": "32.34" },
+          { "distance": "50yd", "type": "Women 15-18 Breaststroke", "time": "39.05" }
+        ]
+      },
+      {
+        "name": "Palko, Matthew",
+        "gender": "Male",
+        "age": 12,
+        "team": "Idlewild",
+        "events": [
+          { "distance": "100yd", "type": "Boys 12 & Under Freestyle", "time": "1:22.39" },
+          { "distance": "50yd", "type": "Boys 11-12 Freestyle", "time": "35.75" },
+          { "distance": "50yd", "type": "Boys 11-12 Breaststroke", "time": "50.57" }
+        ]
+      },
+      {
+        "name": "Theado, Carter",
+        "gender": "Male",
+        "age": 14,
+        "team": "Idlewild",
+        "events": [
+          { "distance": "100yd", "type": "Boys 13-18 Freestyle", "time": "1:00.86" },
+          { "distance": "50yd", "type": "Boys 13-14 Butterfly", "time": "32.85" },
+          { "distance": "50yd", "type": "Boys 13-14 Backstroke", "time": "31.94" }
+        ]
+      },
+      {
+        "name": "Haughton, Garrett",
+        "gender": "Male",
+        "age": 12,
+        "team": "Idlewild",
+        "events": [
+          { "distance": "50yd", "type": "Boys 11-12 Butterfly", "time": "49.75" },
+          { "distance": "50yd", "type": "Boys 11-12 Backstroke", "time": "48.68" },
+          { "distance": "100yd", "type": "Boys 12 & Under IM", "time": "2:00.70" }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "Jun 11, 2025",
+    "team1": "Woodlands",
+    "team2": "Fredericksburg CC",
+    "score1": 538,
+    "score2": 214,
+    "winner": "Woodlands",
+    "homeTeam": "Fredericksburg CC",
+    "awayTeam": "Woodlands",
+    "isExhibition": true,
+    "tripleWinners": [
+      {
+        "name": "Barton, Lila",
+        "gender": "Female",
+        "age": 11,
+        "team": "Woodlands",
+        "events": [
+          { "distance": "100m", "type": "Girls 12 & Under Freestyle", "time": "1:15.73" },
+          { "distance": "50m", "type": "Girls 11-12 Freestyle", "time": "34.90" },
+          { "distance": "50m", "type": "Girls 11-12 Butterfly", "time": "38.12" }
+        ]
+      },
+      {
+        "name": "Hamilton, Zeke",
+        "gender": "Male",
+        "age": 11,
+        "team": "Woodlands",
+        "events": [
+          { "distance": "100m", "type": "Boys 12 & Under Freestyle", "time": "1:16.72" },
+          { "distance": "50m", "type": "Boys 11-12 Freestyle", "time": "34.62" },
+          { "distance": "50m", "type": "Boys 11-12 Backstroke", "time": "42.46" }
+        ]
+      },
+      {
+        "name": "Hatzis, Kristina",
+        "gender": "Female",
+        "age": 17,
+        "team": "Woodlands",
+        "events": [
+          { "distance": "100m", "type": "Girls 13-18 Freestyle", "time": "1:05.06" },
+          { "distance": "50m", "type": "Women 15-18 Butterfly", "time": "32.31" },
+          { "distance": "50m", "type": "Women 15-18 Breaststroke", "time": "37.75" }
+        ]
+      },
+      {
+        "name": "Euker, Aaron",
+        "gender": "Male",
+        "age": 16,
+        "team": "Woodlands",
+        "events": [
+          { "distance": "100m", "type": "Boys 13-18 Freestyle", "time": "57.68" },
+          { "distance": "50m", "type": "Men 15-18 Freestyle", "time": "26.33" },
+          { "distance": "50m", "type": "Men 15-18 Breaststroke", "time": "36.11" }
+        ]
+      },
+      {
+        "name": "Hamilton, Emmilyn",
+        "gender": "Female",
+        "age": 8,
+        "team": "Woodlands",
+        "events": [
+          { "distance": "25m", "type": "Girls 7-8 Freestyle", "time": "17.18" },
+          { "distance": "25m", "type": "Girls 8 & Under Butterfly", "time": "20.48" },
+          { "distance": "25m", "type": "Girls 8 & Under Breaststroke", "time": "25.81" }
+        ]
+      },
+      {
+        "name": "Blake, Nathan",
+        "gender": "Male",
+        "age": 8,
+        "team": "Woodlands",
+        "events": [
+          { "distance": "25m", "type": "Boys 7-8 Freestyle", "time": "20.30" },
+          { "distance": "25m", "type": "Boys 7-8 Backstroke", "time": "26.59" },
+          { "distance": "25m", "type": "Boys 8 & Under Breaststroke", "time": "32.54" }
+        ]
+      },
+      {
+        "name": "Dangol, Samik",
+        "gender": "Male",
+        "age": 9,
+        "team": "Woodlands",
+        "events": [
+          { "distance": "25m", "type": "Boys 9-10 Butterfly", "time": "16.42" },
+          { "distance": "25m", "type": "Boys 9-10 Backstroke", "time": "19.29" },
+          { "distance": "25m", "type": "Boys 9-10 Breaststroke", "time": "20.60" }
+        ]
+      },
+      {
+        "name": "Price, Amelia",
+        "gender": "Female",
+        "age": 14,
+        "team": "Woodlands",
+        "events": [
+          { "distance": "50m", "type": "Girls 13-14 Freestyle", "time": "32.42" },
+          { "distance": "50m", "type": "Girls 13-14 Butterfly", "time": "36.97" },
+          { "distance": "50m", "type": "Girls 13-14 Breaststroke", "time": "43.89" }
+        ]
+      },
+      {
+        "name": "Dangol, Ishaan",
+        "gender": "Male",
+        "age": 14,
+        "team": "Woodlands",
+        "events": [
+          { "distance": "50m", "type": "Boys 13-14 Freestyle", "time": "29.96" },
+          { "distance": "50m", "type": "Boys 13-14 Butterfly", "time": "33.18" },
+          { "distance": "50m", "type": "Boys 13-14 Breaststroke", "time": "34.89" }
+        ]
+      },
+      {
+        "name": "Lange, Maddy",
+        "gender": "Female",
+        "age": 15,
+        "team": "Woodlands",
+        "events": [
+          { "distance": "50m", "type": "Women 15-18 Freestyle", "time": "29.18" },
+          { "distance": "50m", "type": "Women 15-18 Breaststroke", "time": "38.20" },
+          { "distance": "100m", "type": "Girls 13-18 IM", "time": "1:13.75" }
+        ]
+      },
+      {
+        "name": "Buttram, Noah",
+        "gender": "Male",
+        "age": 17,
+        "team": "Woodlands",
+        "events": [
+          { "distance": "50m", "type": "Men 15-18 Butterfly", "time": "27.76" },
+          { "distance": "50m", "type": "Men 15-18 Breaststroke", "time": "29.01" },
+          { "distance": "100m", "type": "Boys 13-18 IM", "time": "1:06.99" }
+        ]
+      },
+      {
+        "name": "Nanthavongsa, Sydnee",
+        "gender": "Female",
+        "age": 11,
+        "team": "Woodlands",
+        "events": [
+          { "distance": "50m", "type": "Girls 11-12 Freestyle", "time": "34.96" },
+          { "distance": "50m", "type": "Girls 11-12 Backstroke", "time": "41.79" },
+          { "distance": "100m", "type": "Girls 12 & Under IM", "time": "1:35.15" }
+        ]
+      },
+      {
+        "name": "Durham, Sawyer",
+        "gender": "Male",
+        "age": 12,
+        "team": "Woodlands",
+        "events": [
+          { "distance": "50m", "type": "Boys 11-12 Butterfly", "time": "37.11" },
+          { "distance": "50m", "type": "Boys 11-12 Breaststroke", "time": "44.53" },
+          { "distance": "100m", "type": "Boys 12 & Under IM", "time": "1:28.31" }
+        ]
+      },
+      {
+        "name": "Watterson, Landon",
+        "gender": "Male",
+        "age": 17,
+        "team": "Woodlands",
+        "events": [
+          { "distance": "50m", "type": "Men 15-18 Freestyle", "time": "28.57" },
+          { "distance": "50m", "type": "Men 15-18 Breaststroke", "time": "34.66" },
+          { "distance": "100m", "type": "Boys 13-18 IM", "time": "1:13.04" }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "Jun 11, 2025",
+    "team1": "Curtis Park",
+    "team2": "Ferry Farm",
+    "score1": 482,
+    "score2": 326,
+    "winner": "Curtis Park",
+    "homeTeam": "Curtis Park",
+    "awayTeam": "Ferry Farm",
+    "isExhibition": true,
+    "tripleWinners": [
+      {
+        "name": "Hombach, William",
+        "gender": "Male",
+        "age": 12,
+        "team": "Curtis Park",
+        "events": [
+          { "distance": "100m", "type": "Boys 12 & Under Freestyle", "time": "1:11.64" },
+          { "distance": "50m", "type": "Boys 11-12 Butterfly", "time": "37.51" },
+          { "distance": "100m", "type": "Boys 12 & Under IM", "time": "1:24.17" }
+        ]
+      },
+      {
+        "name": "Jones, London",
+        "gender": "Female",
+        "age": 17,
+        "team": "Ferry Farm",
+        "events": [
+          { "distance": "100m", "type": "Girls 13-18 Freestyle", "time": "1:06.84" },
+          { "distance": "50m", "type": "Women 15-18 Freestyle", "time": "30.95" },
+          { "distance": "50m", "type": "Women 15-18 Backstroke", "time": "35.25" }
+        ]
+      },
+      {
+        "name": "McOsker, Patrick",
+        "gender": "Male",
+        "age": 17,
+        "team": "Ferry Farm",
+        "events": [
+          { "distance": "100m", "type": "Boys 13-18 Freestyle", "time": "59.48" },
+          { "distance": "50m", "type": "Men 15-18 Butterfly", "time": "30.05" },
+          { "distance": "50m", "type": "Men 15-18 Breaststroke", "time": "35.04" }
+        ]
+      },
+      {
+        "name": "Lincoln, Cooper",
+        "gender": "Male",
+        "age": 8,
+        "team": "Ferry Farm",
+        "events": [
+          { "distance": "25m", "type": "Boys 7-8 Freestyle", "time": "19.67" },
+          { "distance": "25m", "type": "Boys 8 & Under Butterfly", "time": "26.14" },
+          { "distance": "25m", "type": "Boys 8 & Under Breaststroke", "time": "30.90" }
+        ]
+      },
+      {
+        "name": "Pighini, Alina",
+        "gender": "Female",
+        "age": 10,
+        "team": "Curtis Park",
+        "events": [
+          { "distance": "25m", "type": "Girls 9-10 Freestyle", "time": "17.10" },
+          { "distance": "25m", "type": "Girls 9-10 Butterfly", "time": "17.56" },
+          { "distance": "100m", "type": "Girls 12 & Under IM", "time": "1:33.10" }
+        ]
+      },
+      {
+        "name": "Lincoln, Elliott",
+        "gender": "Male",
+        "age": 10,
+        "team": "Ferry Farm",
+        "events": [
+          { "distance": "25m", "type": "Boys 9-10 Freestyle", "time": "17.07" },
+          { "distance": "25m", "type": "Boys 9-10 Butterfly", "time": "20.09" },
+          { "distance": "25m", "type": "Boys 9-10 Breaststroke", "time": "30.65" }
+        ]
+      },
+      {
+        "name": "Thompson, Rhett",
+        "gender": "Male",
+        "age": 11,
+        "team": "Ferry Farm",
+        "events": [
+          { "distance": "50m", "type": "Boys 11-12 Freestyle", "time": "31.64" },
+          { "distance": "50m", "type": "Boys 11-12 Butterfly", "time": "38.19" },
+          { "distance": "100m", "type": "Boys 12 & Under IM", "time": "1:29.61" }
+        ]
+      },
+      {
+        "name": "Ashby, Spencer",
+        "gender": "Female",
+        "age": 14,
+        "team": "Ferry Farm",
+        "events": [
+          { "distance": "50m", "type": "Girls 13-14 Freestyle", "time": "30.10" },
+          { "distance": "50m", "type": "Girls 13-14 Butterfly", "time": "35.23" },
+          { "distance": "100m", "type": "Girls 13-18 IM", "time": "1:18.45" }
+        ]
+      },
+      {
+        "name": "Bazemore-Fountain, Brandon",
+        "gender": "Male",
+        "age": 17,
+        "team": "Ferry Farm",
+        "events": [
+          { "distance": "50m", "type": "Men 15-18 Freestyle", "time": "27.54" },
+          { "distance": "50m", "type": "Men 15-18 Backstroke", "time": "33.63" },
+          { "distance": "100m", "type": "Boys 13-18 IM", "time": "1:12.78" }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "Jun 11, 2025",
+    "team1": "Fox Point",
+    "team2": "Austin Ridge",
+    "score1": 462,
+    "score2": 346,
+    "winner": "Fox Point",
+    "homeTeam": "Fox Point",
+    "awayTeam": "Austin Ridge",
+    "isExhibition": true,
+    "tripleWinners": [
+      {
+        "name": "McCool, Madison",
+        "gender": "Female",
+        "age": 12,
+        "team": "Fox Point",
+        "events": [
+          { "distance": "100m", "type": "Girls 12 & Under Freestyle", "time": "1:19.62" },
+          { "distance": "50m", "type": "Girls 11-12 Freestyle", "time": "38.77" },
+          { "distance": "50m", "type": "Girls 11-12 Backstroke", "time": "43.04" }
+        ]
+      },
+      {
+        "name": "Adcock, Luke",
+        "gender": "Male",
+        "age": 12,
+        "team": "Fox Point",
+        "events": [
+          { "distance": "100m", "type": "Boys 12 & Under Freestyle", "time": "1:19.36" },
+          { "distance": "50m", "type": "Boys 11-12 Butterfly", "time": "41.30" },
+          { "distance": "50m", "type": "Boys 11-12 Breaststroke", "time": "49.66" }
+        ]
+      },
+      {
+        "name": "Johnson, Karis",
+        "gender": "Female",
+        "age": 8,
+        "team": "Austin Ridge",
+        "events": [
+          { "distance": "25m", "type": "Girls 7-8 Freestyle", "time": "20.91" },
+          { "distance": "25m", "type": "Girls 8 & Under Butterfly", "time": "28.54" },
+          { "distance": "25m", "type": "Girls 8 & Under Breaststroke", "time": "34.26" }
+        ]
+      },
+      {
+        "name": "Gallagher, Katie",
+        "gender": "Female",
+        "age": 8,
+        "team": "Austin Ridge",
+        "events": [
+          { "distance": "25m", "type": "Girls 7-8 Freestyle", "time": "21.51" },
+          { "distance": "25m", "type": "Girls 8 & Under Butterfly", "time": "27.68" },
+          { "distance": "25m", "type": "Girls 8 & Under Breaststroke", "time": "34.14" }
+        ]
+      },
+      {
+        "name": "Pyryt, Penny",
+        "gender": "Female",
+        "age": 10,
+        "team": "Austin Ridge",
+        "events": [
+          { "distance": "100m", "type": "Girls 12 & Under Freestyle", "time": "1:21.60" },
+          { "distance": "25m", "type": "Girls 9-10 Butterfly", "time": "21.33" },
+          { "distance": "25m", "type": "Girls 9-10 Breaststroke", "time": "25.44" }
+        ]
+      },
+      {
+        "name": "McCool, Levi",
+        "gender": "Male",
+        "age": 10,
+        "team": "Fox Point",
+        "events": [
+          { "distance": "25m", "type": "Boys 9-10 Freestyle", "time": "16.82" },
+          { "distance": "25m", "type": "Boys 9-10 Butterfly", "time": "21.89" },
+          { "distance": "25m", "type": "Boys 9-10 Breaststroke", "time": "24.59" }
+        ]
+      },
+      {
+        "name": "Campbell, True",
+        "gender": "Male",
+        "age": 12,
+        "team": "Austin Ridge",
+        "events": [
+          { "distance": "50m", "type": "Boys 11-12 Freestyle", "time": "31.95" },
+          { "distance": "50m", "type": "Boys 11-12 Butterfly", "time": "38.17" },
+          { "distance": "50m", "type": "Boys 11-12 Backstroke", "time": "41.87" }
+        ]
+      },
+      {
+        "name": "Kratzer, Clayton",
+        "gender": "Male",
+        "age": 14,
+        "team": "Austin Ridge",
+        "events": [
+          { "distance": "50m", "type": "Boys 13-14 Freestyle", "time": "31.41" },
+          { "distance": "50m", "type": "Boys 13-14 Butterfly", "time": "36.89" },
+          { "distance": "100m", "type": "Boys 13-18 IM", "time": "1:27.16" }
+        ]
+      },
+      {
+        "name": "David, Nora",
+        "gender": "Female",
+        "age": 16,
+        "team": "Austin Ridge",
+        "events": [
+          { "distance": "50m", "type": "Women 15-18 Freestyle", "time": "28.81" },
+          { "distance": "50m", "type": "Women 15-18 Butterfly", "time": "32.09" },
+          { "distance": "100m", "type": "Girls 13-18 IM", "time": "1:11.94" }
+        ]
+      },
+      {
+        "name": "Dykman, Derek",
+        "gender": "Male",
+        "age": 18,
+        "team": "Austin Ridge",
+        "events": [
+          { "distance": "50m", "type": "Men 15-18 Freestyle", "time": "25.36" },
+          { "distance": "50m", "type": "Men 15-18 Butterfly", "time": "27.16" },
+          { "distance": "100m", "type": "Boys 13-18 IM", "time": "1:03.68" }
+        ]
+      },
+      {
+        "name": "Knerr, Lily",
+        "gender": "Female",
+        "age": 11,
+        "team": "Fox Point",
+        "events": [
+          { "distance": "50m", "type": "Girls 11-12 Butterfly", "time": "35.86" },
+          { "distance": "50m", "type": "Girls 11-12 Breaststroke", "time": "42.42" },
+          { "distance": "100m", "type": "Girls 12 & Under IM", "time": "1:24.15" }
+        ]
+      },
+      {
+        "name": "Velez, Juliana",
+        "gender": "Female",
+        "age": 18,
+        "team": "Fox Point",
+        "events": [
+          { "distance": "50m", "type": "Women 15-18 Butterfly", "time": "33.74" },
+          { "distance": "50m", "type": "Women 15-18 Breaststroke", "time": "43.31" },
+          { "distance": "100m", "type": "Girls 13-18 IM", "time": "1:21.25" }
+        ]
+      },
+      {
+        "name": "Mugavero, Ethan",
+        "gender": "Male",
+        "age": 15,
+        "team": "Fox Point",
+        "events": [
+          { "distance": "50m", "type": "Men 15-18 Freestyle", "time": "28.93" },
+          { "distance": "50m", "type": "Men 15-18 Breaststroke", "time": "35.67" },
+          { "distance": "100m", "type": "Boys 13-18 IM", "time": "1:09.66" }
+        ]
+      },
+      {
+        "name": "Green, Kendrick",
+        "gender": "Male",
+        "age": 12,
+        "team": "Fox Point",
+        "events": [
+          { "distance": "50m", "type": "Boys 11-12 Backstroke", "time": "50.96" },
+          { "distance": "50m", "type": "Boys 11-12 Breaststroke", "time": "50.40" },
+          { "distance": "100m", "type": "Boys 12 & Under IM", "time": "1:40.66" }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "Jun 11, 2025",
+    "team1": "Massad YMCA",
+    "team2": "Grafton",
+    "score1": 530,
+    "score2": 248,
+    "winner": "Massad YMCA",
+    "homeTeam": "Grafton",
+    "awayTeam": "Massad YMCA",
+    "isExhibition": true,
+    "tripleWinners": [
+      {
+        "name": "Eddy, Piper",
+        "gender": "Female",
+        "age": 11,
+        "team": "Massad YMCA",
+        "events": [
+          { "distance": "100m", "type": "Girls 12 & Under Freestyle", "time": "1:11.12" },
+          { "distance": "50m", "type": "Girls 11-12 Butterfly", "time": "37.86" },
+          { "distance": "100m", "type": "Girls 12 & Under IM", "time": "1:23.54" }
+        ]
+      },
+      {
+        "name": "Duffy, Brennan",
+        "gender": "Male",
+        "age": 10,
+        "team": "Massad YMCA",
+        "events": [
+          { "distance": "100m", "type": "Boys 12 & Under Freestyle", "time": "1:11.34" },
+          { "distance": "25m", "type": "Boys 9-10 Butterfly", "time": "15.69" },
+          { "distance": "100m", "type": "Boys 12 & Under IM", "time": "1:25.53" }
+        ]
+      },
+      {
+        "name": "Shipley, Aurora",
+        "gender": "Female",
+        "age": 14,
+        "team": "Massad YMCA",
+        "events": [
+          { "distance": "100m", "type": "Girls 13-18 Freestyle", "time": "1:07.35" },
+          { "distance": "50m", "type": "Girls 13-14 Butterfly", "time": "35.61" },
+          { "distance": "100m", "type": "Girls 13-18 IM", "time": "1:23.20" }
+        ]
+      },
+      {
+        "name": "Kopp, Tyler",
+        "gender": "Male",
+        "age": 14,
+        "team": "Massad YMCA",
+        "events": [
+          { "distance": "100m", "type": "Boys 13-18 Freestyle", "time": "1:01.21" },
+          { "distance": "50m", "type": "Boys 13-14 Butterfly", "time": "33.59" },
+          { "distance": "100m", "type": "Boys 13-18 IM", "time": "1:11.35" }
+        ]
+      },
+      {
+        "name": "Lee, Avari",
+        "gender": "Female",
+        "age": 8,
+        "team": "Massad YMCA",
+        "events": [
+          { "distance": "25m", "type": "Girls 7-8 Freestyle", "time": "22.03" },
+          { "distance": "25m", "type": "Girls 8 & Under Butterfly", "time": "30.64" },
+          { "distance": "25m", "type": "Girls 8 & Under Breaststroke", "time": "34.21" }
+        ]
+      },
+      {
+        "name": "Wright, Kyler",
+        "gender": "Male",
+        "age": 8,
+        "team": "Massad YMCA",
+        "events": [
+          { "distance": "25m", "type": "Boys 7-8 Freestyle", "time": "20.83" },
+          { "distance": "25m", "type": "Boys 8 & Under Butterfly", "time": "25.59" },
+          { "distance": "25m", "type": "Boys 7-8 Backstroke", "time": "25.36" }
+        ]
+      },
+      {
+        "name": "Migliaccio, Tobias",
+        "gender": "Male",
+        "age": 8,
+        "team": "Massad YMCA",
+        "events": [
+          { "distance": "25m", "type": "Boys 7-8 Freestyle", "time": "21.03" },
+          { "distance": "25m", "type": "Boys 8 & Under Butterfly", "time": "27.05" },
+          { "distance": "25m", "type": "Boys 8 & Under Breaststroke", "time": "28.82" }
+        ]
+      },
+      {
+        "name": "Woodson, Mckenzie",
+        "gender": "Female",
+        "age": 10,
+        "team": "Grafton",
+        "events": [
+          { "distance": "25m", "type": "Girls 9-10 Freestyle", "time": "18.76" },
+          { "distance": "25m", "type": "Girls 9-10 Butterfly", "time": "20.54" },
+          { "distance": "25m", "type": "Girls 9-10 Breaststroke", "time": "24.84" }
+        ]
+      },
+      {
+        "name": "Martin, Luke A.",
+        "gender": "Male",
+        "age": 18,
+        "team": "Massad YMCA",
+        "events": [
+          { "distance": "50m", "type": "Men 15-18 Freestyle", "time": "28.85" },
+          { "distance": "50m", "type": "Men 15-18 Backstroke", "time": "32.27" },
+          { "distance": "100m", "type": "Boys 13-18 IM", "time": "1:10.20" }
+        ]
+      },
+      {
+        "name": "Lungoccia, Giana",
+        "gender": "Female",
+        "age": 11,
+        "team": "Grafton",
+        "events": [
+          { "distance": "50m", "type": "Girls 11-12 Butterfly", "time": "39.45" },
+          { "distance": "50m", "type": "Girls 11-12 Breaststroke", "time": "46.76" },
+          { "distance": "100m", "type": "Girls 12 & Under IM", "time": "1:31.39" }
+        ]
+      },
+      {
+        "name": "Williams, Samantha",
+        "gender": "Female",
+        "age": 14,
+        "team": "Massad YMCA",
+        "events": [
+          { "distance": "50m", "type": "Girls 13-14 Freestyle", "time": "32.52" },
+          { "distance": "50m", "type": "Girls 13-14 Butterfly", "time": "35.72" },
+          { "distance": "100m", "type": "Girls 13-18 IM", "time": "1:22.49" }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "Jun 11, 2025",
+    "team1": "Aquia Harbour",
+    "team2": "Lee's Hill",
+    "score1": 489,
+    "score2": 286,
+    "winner": "Aquia Harbour",
+    "homeTeam": "Lee's Hill",
+    "awayTeam": "Aquia Harbour",
+    "isExhibition": true,
+    "tripleWinners": [
+      {
+        "name": "Porter, Breezy",
+        "gender": "Female",
+        "age": 12,
+        "team": "Aquia Harbour",
+        "events": [
+          { "distance": "100m", "type": "Girls 12 & Under Freestyle", "time": "1:06.16" },
+          { "distance": "50m", "type": "Girls 11-12 Freestyle", "time": "31.03" },
+          { "distance": "50m", "type": "Girls 11-12 Backstroke", "time": "38.07" }
+        ]
+      },
+      {
+        "name": "Holland, Carter",
+        "gender": "Male",
+        "age": 12,
+        "team": "Aquia Harbour",
+        "events": [
+          { "distance": "100m", "type": "Boys 12 & Under Freestyle", "time": "1:21.31" },
+          { "distance": "50m", "type": "Boys 11-12 Butterfly", "time": "42.82" },
+          { "distance": "50m", "type": "Boys 11-12 Freestyle", "time": "36.90" }
+        ]
+      },
+      {
+        "name": "Engel, Sam",
+        "gender": "Female",
+        "age": 13,
+        "team": "Aquia Harbour",
+        "events": [
+          { "distance": "100m", "type": "Girls 13-18 Freestyle", "time": "1:10.02" },
+          { "distance": "50m", "type": "Girls 13-14 Freestyle", "time": "33.74" },
+          { "distance": "50m", "type": "Girls 13-14 Butterfly", "time": "35.23" }
+        ]
+      },
+      {
+        "name": "Porter, Landon",
+        "gender": "Male",
+        "age": 10,
+        "team": "Aquia Harbour",
+        "events": [
+          { "distance": "25m", "type": "Boys 9-10 Freestyle", "time": "16.97" },
+          { "distance": "25m", "type": "Boys 9-10 Butterfly", "time": "19.50" },
+          { "distance": "25m", "type": "Boys 9-10 Backstroke", "time": "22.78" }
+        ]
+      },
+      {
+        "name": "McFarlane, Phillip",
+        "gender": "Male",
+        "age": 11,
+        "team": "Aquia Harbour",
+        "events": [
+          { "distance": "50m", "type": "Boys 11-12 Freestyle", "time": "35.16" },
+          { "distance": "50m", "type": "Boys 11-12 Butterfly", "time": "38.94" },
+          { "distance": "100m", "type": "Boys 12 & Under IM", "time": "1:31.24" }
+        ]
+      },
+      {
+        "name": "Rosero, Violet",
+        "gender": "Female",
+        "age": 14,
+        "team": "Aquia Harbour",
+        "events": [
+          { "distance": "50m", "type": "Girls 13-14 Butterfly", "time": "34.84" },
+          { "distance": "50m", "type": "Girls 13-14 Backstroke", "time": "37.22" },
+          { "distance": "100m", "type": "Girls 13-18 IM", "time": "1:19.41" }
+        ]
+      },
+      {
+        "name": "Holland, Aiden",
+        "gender": "Male",
+        "age": 15,
+        "team": "Aquia Harbour",
+        "events": [
+          { "distance": "50m", "type": "Men 15-18 Freestyle", "time": "28.22" },
+          { "distance": "50m", "type": "Men 15-18 Backstroke", "time": "34.54" },
+          { "distance": "100m", "type": "Boys 13-18 IM", "time": "1:14.19" }
+        ]
+      },
+      {
+        "name": "Fairchild, Teagan",
+        "gender": "Female",
+        "age": 8,
+        "team": "Lee's Hill",
+        "events": [
+          { "distance": "25m", "type": "Girls 7-8 Freestyle", "time": "23.04" },
+          { "distance": "25m", "type": "Girls 8 & Under Butterfly", "time": "33.18" },
+          { "distance": "25m", "type": "Girls 8 & Under Breaststroke", "time": "38.91" }
+        ]
+      },
+      {
+        "name": "Kohl, Erin",
+        "gender": "Female",
+        "age": 9,
+        "team": "Lee's Hill",
+        "events": [
+          { "distance": "25m", "type": "Girls 9-10 Freestyle", "time": "19.22" },
+          { "distance": "25m", "type": "Girls 9-10 Butterfly", "time": "22.44" },
+          { "distance": "25m", "type": "Girls 9-10 Breaststroke", "time": "29.39" }
+        ]
+      },
+      {
+        "name": "Bauer, Elise",
+        "gender": "Female",
+        "age": 13,
+        "team": "Lee's Hill",
+        "events": [
+          { "distance": "50m", "type": "Girls 13-14 Freestyle", "time": "31.07" },
+          { "distance": "50m", "type": "Girls 13-14 Breaststroke", "time": "42.89" },
+          { "distance": "100m", "type": "Girls 13-18 IM", "time": "1:21.60" }
+        ]
+      },
+      {
+        "name": "Appleton, Patrick",
+        "gender": "Male",
+        "age": 14,
+        "team": "Lee's Hill",
+        "events": [
+          { "distance": "50m", "type": "Boys 13-14 Butterfly", "time": "30.93" },
+          { "distance": "50m", "type": "Boys 13-14 Backstroke", "time": "33.62" },
+          { "distance": "100m", "type": "Boys 13-18 IM", "time": "1:15.00" }
+        ]
+      },
+      {
+        "name": "McClutchy, Lilly",
+        "gender": "Female",
+        "age": 16,
+        "team": "Aquia Harbour",
+        "events": [
+          { "distance": "50m", "type": "Women 15-18 Freestyle", "time": "31.38" },
+          { "distance": "50m", "type": "Women 15-18 Butterfly", "time": "35.72" },
+          { "distance": "100m", "type": "Girls 13-18 IM", "time": "1:21.44" }
+        ]
+      },
+      {
+        "name": "Valasko, Jackson",
+        "gender": "Male",
+        "age": 17,
+        "team": "Lee's Hill",
+        "events": [
+          { "distance": "50m", "type": "Men 15-18 Butterfly", "time": "31.42" },
+          { "distance": "50m", "type": "Men 15-18 Backstroke", "time": "32.92" },
+          { "distance": "100m", "type": "Boys 13-18 IM", "time": "1:13.21" }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "Jun 11, 2025",
+    "team1": "Leeland Station",
+    "team2": "Dahlgren",
+    "score1": 463,
+    "score2": 275.5,
+    "winner": "Leeland Station",
+    "homeTeam": "Leeland Station",
+    "awayTeam": "Dahlgren",
+    "isExhibition": true,
+    "tripleWinners": [
+      {
+        "name": "Thomason, Jordan",
+        "gender": "Male",
+        "age": 12,
+        "team": "Dahlgren",
+        "events": [
+          { "distance": "100m", "type": "Boys 12 & Under Freestyle", "time": "1:16.99" },
+          { "distance": "50m", "type": "Boys 11-12 Butterfly", "time": "41.79" },
+          { "distance": "100m", "type": "Boys 12 & Under IM", "time": "1:32.04" }
+        ]
+      },
+      {
+        "name": "Palomo, Edward",
+        "gender": "Male",
+        "age": 14,
+        "team": "Leeland Station",
+        "events": [
+          { "distance": "100m", "type": "Boys 13-18 Freestyle", "time": "1:00.00" },
+          { "distance": "50m", "type": "Boys 13-14 Freestyle", "time": "26.88" },
+          { "distance": "50m", "type": "Boys 13-14 Breaststroke", "time": "40.36" }
+        ]
+      },
+      {
+        "name": "Barrett, Calista",
+        "gender": "Female",
+        "age": 16,
+        "team": "Leeland Station",
+        "events": [
+          { "distance": "100m", "type": "Girls 13-18 Freestyle", "time": "1:06.65" },
+          { "distance": "50m", "type": "Women 15-18 Backstroke", "time": "33.88" },
+          { "distance": "100m", "type": "Girls 13-18 IM", "time": "1:13.27" }
+        ]
+      },
+      {
+        "name": "Caro, Lucia",
+        "gender": "Female",
+        "age": 10,
+        "team": "Dahlgren",
+        "events": [
+          { "distance": "25m", "type": "Girls 9-10 Freestyle", "time": "18.54" },
+          { "distance": "25m", "type": "Girls 9-10 Butterfly", "time": "21.98" },
+          { "distance": "25m", "type": "Girls 9-10 Backstroke", "time": "21.31" }
+        ]
+      },
+      {
+        "name": "Green, Eli",
+        "gender": "Male",
+        "age": 10,
+        "team": "Leeland Station",
+        "events": [
+          { "distance": "25m", "type": "Boys 9-10 Freestyle", "time": "18.78" },
+          { "distance": "25m", "type": "Boys 9-10 Butterfly", "time": "24.27" },
+          { "distance": "25m", "type": "Boys 9-10 Backstroke", "time": "22.90" }
+        ]
+      },
+      {
+        "name": "Ahlers, Rowan",
+        "gender": "Male",
+        "age": 10,
+        "team": "Leeland Station",
+        "events": [
+          { "distance": "25m", "type": "Boys 9-10 Freestyle", "time": "17.71" },
+          { "distance": "25m", "type": "Boys 9-10 Breaststroke", "time": "23.58" },
+          { "distance": "25m", "type": "Boys 9-10 Backstroke", "time": "24.38" }
+        ]
+      },
+      {
+        "name": "Ouellette, Emme",
+        "gender": "Female",
+        "age": 12,
+        "team": "Leeland Station",
+        "events": [
+          { "distance": "50m", "type": "Girls 11-12 Freestyle", "time": "32.50" },
+          { "distance": "50m", "type": "Girls 11-12 Butterfly", "time": "35.76" },
+          { "distance": "50m", "type": "Girls 11-12 Breaststroke", "time": "44.46" }
+        ]
+      },
+      {
+        "name": "Connolly, Sophia",
+        "gender": "Female",
+        "age": 13,
+        "team": "Dahlgren",
+        "events": [
+          { "distance": "50m", "type": "Girls 13-14 Butterfly", "time": "34.83" },
+          { "distance": "50m", "type": "Girls 13-14 Breaststroke", "time": "41.74" },
+          { "distance": "100m", "type": "Girls 13-18 IM", "time": "1:21.27" }
+        ]
+      },
+      {
+        "name": "Brown, Jake",
+        "gender": "Male",
+        "age": 16,
+        "team": "Dahlgren",
+        "events": [
+          { "distance": "100m", "type": "Boys 13-18 Freestyle", "time": "1:01.07" },
+          { "distance": "50m", "type": "Men 15-18 Butterfly", "time": "29.99" },
+          { "distance": "100m", "type": "Boys 13-18 IM", "time": "1:11.77" }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "Jun 11, 2025",
+    "team1": "Spotswood",
+    "team2": "Spotsy Y",
+    "score1": 491,
+    "score2": 259,
+    "winner": "Spotswood",
+    "homeTeam": "Spotswood",
+    "awayTeam": "Spotsy Y",
+    "isExhibition": true,
+    "tripleWinners": [
+      {
+        "name": "Mosier, Clara",
+        "gender": "Female",
+        "age": 12,
+        "team": "Spotswood",
+        "events": [
+          { "distance": "100m", "type": "Girls 12 & Under Freestyle", "time": "1:14.12" },
+          { "distance": "50m", "type": "Girls 11-12 Freestyle", "time": "33.39" },
+          { "distance": "50m", "type": "Girls 11-12 Breaststroke", "time": "43.11" }
+        ]
+      },
+      {
+        "name": "Dunkle, Emma",
+        "gender": "Female",
+        "age": 14,
+        "team": "Spotswood",
+        "events": [
+          { "distance": "100m", "type": "Girls 13-18 Freestyle", "time": "1:05.25" },
+          { "distance": "50m", "type": "Girls 13-14 Freestyle", "time": "30.52" },
+          { "distance": "50m", "type": "Girls 13-14 Butterfly", "time": "33.69" }
+        ]
+      },
+      {
+        "name": "Lipscomb, Chase",
+        "gender": "Male",
+        "age": 11,
+        "team": "Spotswood",
+        "events": [
+          { "distance": "50m", "type": "Boys 11-12 Freestyle", "time": "36.39" },
+          { "distance": "50m", "type": "Boys 11-12 Butterfly", "time": "39.80" },
+          { "distance": "100m", "type": "Boys 12 & Under IM", "time": "1:36.50" }
+        ]
+      },
+      {
+        "name": "DeLorme, Deckard",
+        "gender": "Male",
+        "age": 14,
+        "team": "Spotswood",
+        "events": [
+          { "distance": "50m", "type": "Boys 13-14 Freestyle", "time": "27.91" },
+          { "distance": "50m", "type": "Boys 13-14 Butterfly", "time": "31.00" },
+          { "distance": "50m", "type": "Boys 13-14 Breaststroke", "time": "38.03" }
+        ]
+      },
+      {
+        "name": "McCorkle, Allison",
+        "gender": "Female",
+        "age": 15,
+        "team": "Spotswood",
+        "events": [
+          { "distance": "50m", "type": "Women 15-18 Freestyle", "time": "34.75" },
+          { "distance": "50m", "type": "Women 15-18 Breaststroke", "time": "44.26" },
+          { "distance": "100m", "type": "Girls 13-18 IM", "time": "1:25.51" }
+        ]
+      },
+      {
+        "name": "Davies, Brody",
+        "gender": "Male",
+        "age": 18,
+        "team": "Spotsy Y",
+        "events": [
+          { "distance": "100m", "type": "Boys 13-18 Freestyle", "time": "1:00.86" },
+          { "distance": "50m", "type": "Men 15-18 Butterfly", "time": "29.91" },
+          { "distance": "100m", "type": "Boys 13-18 IM", "time": "1:05.96" }
+        ]
+      },
+      {
+        "name": "Lyman, Clara",
+        "gender": "Female",
+        "age": 8,
+        "team": "Spotsy Y",
+        "events": [
+          { "distance": "25m", "type": "Girls 7-8 Freestyle", "time": "26.68" },
+          { "distance": "25m", "type": "Girls 7-8 Backstroke", "time": "26.99" },
+          { "distance": "25m", "type": "Girls 8 & Under Breaststroke", "time": "35.69" }
+        ]
+      },
+      {
+        "name": "Stepaniak, Logan",
+        "gender": "Male",
+        "age": 8,
+        "team": "Spotsy Y",
+        "events": [
+          { "distance": "25m", "type": "Boys 7-8 Freestyle", "time": "24.89" },
+          { "distance": "25m", "type": "Boys 7-8 Backstroke", "time": "29.50" },
+          { "distance": "25m", "type": "Boys 8 & Under Breaststroke", "time": "32.50" }
+        ]
+      },
+      {
+        "name": "Taylor, Shelby",
+        "gender": "Female",
+        "age": 10,
+        "team": "Spotsy Y",
+        "events": [
+          { "distance": "25m", "type": "Girls 9-10 Freestyle", "time": "18.17" },
+          { "distance": "25m", "type": "Girls 9-10 Backstroke", "time": "21.40" },
+          { "distance": "25m", "type": "Girls 9-10 Breaststroke", "time": "23.52" }
+        ]
+      },
+      {
+        "name": "Adom-Oppong, Nicholas",
+        "gender": "Male",
+        "age": 10,
+        "team": "Spotsy Y",
+        "events": [
+          { "distance": "25m", "type": "Boys 9-10 Freestyle", "time": "17.00" },
+          { "distance": "25m", "type": "Boys 9-10 Backstroke", "time": "20.58" },
+          { "distance": "25m", "type": "Boys 9-10 Breaststroke", "time": "24.32" }
+        ]
+      },
+      {
+        "name": "Johnson, Joleen",
+        "gender": "Female",
+        "age": 14,
+        "team": "Spotsy Y",
+        "events": [
+          { "distance": "50m", "type": "Girls 13-14 Freestyle", "time": "34.51" },
+          { "distance": "50m", "type": "Girls 13-14 Breaststroke", "time": "42.28" },
+          { "distance": "100m", "type": "Girls 13-18 IM", "time": "1:28.41" }
+        ]
+      },
+      {
+        "name": "Parker, Austin",
+        "gender": "Male",
+        "age": 17,
+        "team": "Spotsy Y",
+        "events": [
+          { "distance": "100m", "type": "Boys 13-18 Freestyle", "time": "59.94" },
+          { "distance": "50m", "type": "Men 15-18 Breaststroke", "time": "37.01" },
+          { "distance": "100m", "type": "Boys 13-18 IM", "time": "1:08.08" }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "Jun 11, 2025",
+    "team1": "Salem Fields",
+    "team2": "Fawn Lake",
+    "score1": 257,
+    "score2": 492,
+    "winner": "Fawn Lake",
+    "homeTeam": "Salem Fields",
+    "awayTeam": "Fawn Lake",
+    "isExhibition": true,
+    "tripleWinners": [
+      {
+        "name": "Ryan, Samantha",
+        "gender": "Female",
+        "age": 12,
+        "team": "Fawn Lake",
+        "events": [
+          { "distance": "100m", "type": "Girls 12 & Under Freestyle", "time": "1:15.16" },
+          { "distance": "50m", "type": "Girls 11-12 Freestyle", "time": "32.92" },
+          { "distance": "50m", "type": "Girls 11-12 Breaststroke", "time": "43.38" }
+        ]
+      },
+      {
+        "name": "Jung, Aaron",
+        "gender": "Male",
+        "age": 11,
+        "team": "Salem Fields",
+        "events": [
+          { "distance": "100m", "type": "Boys 12 & Under Freestyle", "time": "1:11.14" },
+          { "distance": "50m", "type": "Boys 11-12 Butterfly", "time": "37.74" },
+          { "distance": "100m", "type": "Boys 12 & Under IM", "time": "1:28.41" }
+        ]
+      },
+      {
+        "name": "DeLorme, Skylar",
+        "gender": "Female",
+        "age": 18,
+        "team": "Salem Fields",
+        "events": [
+          { "distance": "100m", "type": "Girls 13-18 Freestyle", "time": "1:05.74" },
+          { "distance": "50m", "type": "Women 15-18 Breaststroke", "time": "40.28" },
+          { "distance": "100m", "type": "Girls 13-18 IM", "time": "1:20.28" }
+        ]
+      },
+      {
+        "name": "Ryan, Cecie",
+        "gender": "Female",
+        "age": 10,
+        "team": "Fawn Lake",
+        "events": [
+          { "distance": "25m", "type": "Girls 9-10 Freestyle", "time": "16.21" },
+          { "distance": "25m", "type": "Girls 9-10 Butterfly", "time": "18.09" },
+          { "distance": "25m", "type": "Girls 9-10 Breaststroke", "time": "23.20" }
+        ]
+      },
+      {
+        "name": "Beall, James",
+        "gender": "Male",
+        "age": 10,
+        "team": "Fawn Lake",
+        "events": [
+          { "distance": "25m", "type": "Boys 9-10 Freestyle", "time": "18.14" },
+          { "distance": "25m", "type": "Boys 9-10 Butterfly", "time": "20.70" },
+          { "distance": "25m", "type": "Boys 9-10 Breaststroke", "time": "23.30" }
+        ]
+      },
+      {
+        "name": "Fowler, Adi",
+        "gender": "Female",
+        "age": 14,
+        "team": "Fawn Lake",
+        "events": [
+          { "distance": "50m", "type": "Girls 13-14 Freestyle", "time": "30.42" },
+          { "distance": "50m", "type": "Girls 13-14 Butterfly", "time": "33.41" },
+          { "distance": "100m", "type": "Girls 13-18 IM", "time": "1:15.07" }
+        ]
+      },
+      {
+        "name": "Ryan, Adrianna",
+        "gender": "Female",
+        "age": 14,
+        "team": "Fawn Lake",
+        "events": [
+          { "distance": "100m", "type": "Girls 13-18 Freestyle", "time": "1:10.82" },
+          { "distance": "50m", "type": "Girls 13-14 Butterfly", "time": "37.61" },
+          { "distance": "50m", "type": "Girls 13-14 Breaststroke", "time": "41.10" }
+        ]
+      },
+      {
+        "name": "Ryan, Nathan",
+        "gender": "Male",
+        "age": 16,
+        "team": "Fawn Lake",
+        "events": [
+          { "distance": "100m", "type": "Boys 13-18 Freestyle", "time": "1:05.69" },
+          { "distance": "50m", "type": "Men 15-18 Freestyle", "time": "28.43" },
+          { "distance": "50m", "type": "Men 15-18 Breaststroke", "time": "38.75" }
+        ]
+      },
+      {
+        "name": "DeWeese, Kensie",
+        "gender": "Female",
+        "age": 7,
+        "team": "Fawn Lake",
+        "events": [
+          { "distance": "25m", "type": "Girls 7-8 Freestyle", "time": "20.31" },
+          { "distance": "25m", "type": "Girls 8 & Under Butterfly", "time": "23.52" },
+          { "distance": "25m", "type": "Girls 8 & Under Breaststroke", "time": "29.75" }
+        ]
+      },
+      {
+        "name": "Simpson, Benson",
+        "gender": "Male",
+        "age": 8,
+        "team": "Fawn Lake",
+        "events": [
+          { "distance": "25m", "type": "Boys 7-8 Freestyle", "time": "22.14" },
+          { "distance": "25m", "type": "Boys 7-8 Backstroke", "time": "28.63" },
+          { "distance": "25m", "type": "Boys 8 & Under Breaststroke", "time": "32.74" }
+        ]
+      },
+      {
+        "name": "Quinn, Jase",
+        "gender": "Male",
+        "age": 11,
+        "team": "Fawn Lake",
+        "events": [
+          { "distance": "50m", "type": "Boys 11-12 Freestyle", "time": "35.90" },
+          { "distance": "50m", "type": "Boys 11-12 Backstroke", "time": "46.03" },
+          { "distance": "100m", "type": "Boys 12 & Under IM", "time": "1:43.47" }
+        ]
+      }
+    ]
+       }
+    ]
